@@ -4,6 +4,8 @@ The second iteration of [my social networking website](https://github.com/alimah
 
 This website landed us our first media appearances.
 
+You can check out the [screenshots](screenshots/) folder.
+
 ## License
 
 This project is licensed under the terms specified in the LICENSE file.
