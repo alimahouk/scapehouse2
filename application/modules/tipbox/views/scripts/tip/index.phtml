@@ -1,0 +1,116 @@
+<div class="appIdentifier">
+    <a href="http://itunes.apple.com/us/app/tipbox-by-scapehouse/id551452025" target="_blank"><div class="appIcon tb"></div></a>
+    <h2 class="headline"><a href="http://itunes.apple.com/us/app/tipbox-by-scapehouse/id551452025" target="_blank">Tipbox</a></h2>
+    <h3 class="tagline">Tip sharing, reinvented for your iPhone.</h3>
+</div>
+<?php
+
+$this->tip["topicContent"] = htmlentities($this->tip["topicContent"],ENT_NOQUOTES,"UTF-8");
+$this->tip["content"] = htmlentities($this->tip["content"],ENT_NOQUOTES,"UTF-8");
+?>
+<div class="divider upper"></div>
+<div class="viralButtons">
+    <div class="fb-like" data-href="http://scapehouse.com/tipbox/tip/<?= $this->tip["id"]; ?>" data-send="true" data-layout="box_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div>
+    <div class="twitter-tweet">
+        <?php
+        if (strlen($this->tip["content"]) > 92) {
+            $shortTip = substr($this->tip["content"], 0, 92) . "…";
+        } else {
+            $shortTip = $this->tip["content"];
+        }
+        ?>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-related="scapehouse:Scapehouse" data-text="<?= $shortTip; ?> #Tipbox (by @Scapehouse)" data-counturl="http://scapehouse.com/tipbox/tip/<?= $this->tip["id"]; ?>" data-lang="en" data-size="small" data-count="vertical">Tweet</a>
+    </div>
+</div>
+<div class="tip" id="<?= $this->tip["id"]; ?>">
+    <div class="wrapper">
+
+        <? if ($this->tip["pichash"]): ?>
+            <img class="userThmbnl"  src="<?= "http://scapehouse.com/userphotos/{$this->tip["userid"]}/profile/m_{$this->tip["pichash"]}.jpg" ?>" /> 
+        <? else: ?>
+            <img class="userThmbnl"  src="<?= "http://scapehouse.com/userphotos/placeholder.png" ?>" /> 
+        <? endif; ?>
+
+        <h2 class="name">
+            <span class="nameWrapper"><?= $this->tip["fullname"]; ?></span>
+        </h2>
+        <h3 class="username">
+            <span class="usernameWrapper">@<?= $this->tip["username"]; ?></span>
+        </h3>
+        <div class="timestamp">
+            <span class="timestampWrapper"><?= $this->tip["relativeTimeShort"]; ?></span>
+        </div>
+        <?php
+        include "../parseUrl/parseUrl.php";
+        $linkedTip =  make_clickable($this->tip["content"]);
+        ?>
+        <div class="tipTxt">
+            <p><?= $linkedTip; ?></p>
+        </div>
+        <div class="topicStrip">
+            <span class="topicWrapper"><?= $this->tip["topicContent"]; ?></span>
+        </div>
+    </div>
+</div>
+<h3 class="usefulnessMeter hidden">0 people found this useful</h3>
+<div class="facemash hidden">
+    <div class="innerContainer">
+        <a href="#" class="photoWrapper hasTooltip" onclick="return false;">
+            <div class="tooltip left"><div class="tooltipTxt">Ali Mahouk</div></div>
+            <img class="hidden" src="https://si0.twimg.com/profile_images/1107743743/avatar_reasonably_small.png" />
+        </a>
+        <a href="#" class="photoWrapper hasTooltip" onclick="return false;">
+            <div class="tooltip left"><div class="tooltipTxt">Ali Mahouk</div></div>
+            <img  class="hidden" src="https://si0.twimg.com/profile_images/1107743743/avatar_reasonably_small.png" />
+        </a>
+        <a href="#" class="photoWrapper hasTooltip" onclick="return false;">
+            <div class="tooltip left"><div class="tooltipTxt">Ali Mahouk</div></div>
+            <img  class="hidden" src="https://si0.twimg.com/profile_images/1107743743/avatar_reasonably_small.png" />
+        </a>
+        <a href="#" class="photoWrapper hasTooltip" onclick="return false;">
+            <div class="tooltip left"><div class="tooltipTxt">Ali Mahouk</div></div>
+            <img  class="hidden" src="https://si0.twimg.com/profile_images/1107743743/avatar_reasonably_small.png" />
+        </a>
+        <a href="#" class="photoWrapper hasTooltip" onclick="return false;">
+            <div class="tooltip left"><div class="tooltipTxt">Ali Mahouk</div></div>
+            <img  class="hidden" src="https://si0.twimg.com/profile_images/1107743743/avatar_reasonably_small.png" />
+        </a>
+        <a href="#" class="photoWrapper hasTooltip" onclick="return false;">
+            <div class="tooltip left"><div class="tooltipTxt">Ali Mahouk</div></div>
+            <img  class="hidden" src="https://si0.twimg.com/profile_images/1107743743/avatar_reasonably_small.png" />
+        </a>
+        <a href="#" class="photoWrapper hasTooltip" onclick="return false;">
+            <div class="tooltip left"><div class="tooltipTxt">Ali Mahouk</div></div>
+            <img  class="hidden" src="https://si0.twimg.com/profile_images/1107743743/avatar_reasonably_small.png" />
+        </a>
+        <a href="#" class="photoWrapper hasTooltip" onclick="return false;">
+            <div class="tooltip left"><div class="tooltipTxt">Ali Mahouk</div></div>
+            <img  class="hidden" src="https://si0.twimg.com/profile_images/1107743743/avatar_reasonably_small.png" />
+        </a>
+        <a href="#" class="photoWrapper hasTooltip" onclick="return false;">
+            <div class="tooltip left"><div class="tooltipTxt">Ali Mahouk</div></div>
+            <img  class="hidden" src="https://si0.twimg.com/profile_images/1107743743/avatar_reasonably_small.png" />
+        </a>
+    </div>
+</div>
+<div class="category <?= $this->tip["parentcat"]; ?>">
+    <div class="icon"></div>
+    <?php if ($this->tip["parentcat"] == "idea"): ?>
+        <h3>This tip is related to an idea.</h3>
+    <?php else:; ?>
+        <h3>This tip is related to a <?= $this->tip["parentcat"]; ?> (<?= $this->tip["subcat"]; ?>).</h3>
+    <?php endif; ?>
+
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=278585982224213";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>

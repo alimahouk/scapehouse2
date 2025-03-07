@@ -1,0 +1,175 @@
+<script src="/scripts/lib/jquery.js" type="text/javascript"></script>
+
+
+<script>
+ 
+    function inputCall(){
+    
+        // Clear inputCollector
+        $('#inputCollector').html('');
+    
+        var input = $('#ta1').val();
+    
+        var inputArray = input.split(',');
+    
+        $.each(inputArray, function(i,data){
+        
+            $('#inputCollector').append(data + ': <input name="'+data+'" type="text"><br />');
+        
+        });
+    }
+
+    function postCall(){
+        
+        var apiCall = $('#ta2').val();
+        var callString = '';
+    
+        $.each($('#inputCollector input'),function(i,elm){
+            callString += $(elm).attr('name')+'='+$(elm).val()+'&';
+        }
+    
+    );
+        //alert(callString); 
+    
+        $.ajax({
+            type:"POST",
+            url: "/tipbox/api/"+apiCall,
+            data: callString,
+            error: function(e){
+                //alert(e);
+            },
+            success: function(responce) {
+			
+                $('#resultSector').html("").append(responce);
+			
+            }
+        });
+    
+    }
+
+</script>
+
+
+Input fields: <br />
+<textarea id="ta1"></textarea> <br/>
+API call: <br/>
+<textarea id="ta2"></textarea> <br/>
+
+<input type="submit" onclick="inputCall();return false;"><br/><br/>
+
+<h2> Input Collector </h2>
+<div id="inputCollector">
+</div> <input type="submit" onclick="postCall();return false;"><br/><br/>
+
+
+<h2> Result Sector</h2>
+
+<div id="resultSector">
+</div> <br/><br/>
+
+<form action="/tipbox/api/uploadpicture" method="POST"
+      enctype="multipart/form-data">
+    <label for="file">Filename:</label>
+    <input type="file" name="imageFile" id="uploadedfile" />
+    <input type="hidden" name="token" value="11" id="tokenInput" /> 
+    <br />
+    <input type="submit" name="Submit" value="Submit" />
+</form>
+
+<?php
+//// Insert your keys/tokens
+//$consumerKey = 'JbrsDqt4q6uS6Av58WkIw';
+//$consumerSecret = 'YOUR_CONSUMER_SECRET';
+//$OAuthToken = 'YOUR_OAUTH_TOKEN';
+//$OAuthSecret = 'YOUR_OAUTH_SECRET';
+//
+//// Full path to twitterOAuth.php (change OAuth to your own path)
+//require_once('../twitter_oauth/twitteroauth.php');
+//
+//// create new instance
+//$tweet = new TwitterOAuth($consumerKey, $consumerSecret, $OAuthToken, $OAuthSecret);
+//
+//// Your Message
+//$message = "This is a test message too...";
+//
+//// Send tweet 
+//$tweet->post('statuses/update', array('status' => "$message"));
+
+// Grab picture
+//            $curl_handle = curl_init();
+//            curl_setopt($curl_handle, CURLOPT_URL, "http://a0.twimg.com/profile_images/1805460104/406974_3087878560557_1371720131_3230503_1183598248_n_1__bigger.jpg");
+//            curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
+//            curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
+//           $buffer = curl_exec($curl_handle);
+//            curl_close($curl_handle);
+//                    $getImage = new Model_Lib_GetImage();
+//                    $getImage->quality = "100";
+//                    $getImage->save_to = "userphotos/";
+//                    $getImage->source = "http://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/MacBook_Pro.jpg/220px-MacBook_Pro.jpg";
+//
+//                    $getImage->download();
+//                    
+//            $image = (array) json_decode($buffer);
+//            print_r($image);
+//// APNs Push...
+//$deviceToken = "YOUR_DEVICE_TOKEN"; // Device token
+//
+//// JSON Payload
+//$payload['aps'] = array('alert' => 'The app is progressing really....f the core functionalit now out of the way i...ocus on the more finer details. We are hoping to get the app submitted f..ng of the next week if all goes well. Wish us luck :)', 'badge' => 1, 'sound' => 'default');
+//$payload = json_encode($payload);
+//
+//echo strlen($payload);
+//echo $payload;
+//echo "<br>";
+//
+//$apnsHost = 'gateway.push.apple.com';
+//$apnsPort = 2195;
+//$apnsCert = '../applePush/ck_production.pem';
+//$passphrase = 'akrdOsIp8700nm45admin_APNS';
+//
+//// Stream erstellen
+//$streamContext = stream_context_create();
+//
+//stream_context_set_option($streamContext, 'ssl', 'local_cert', $apnsCert);
+//stream_context_set_option($streamContext, 'ssl', 'passphrase', $passphrase);
+//
+//$apns = stream_socket_client('ssl://' . $apnsHost . ':' . $apnsPort, $error, $errorString, 2, STREAM_CLIENT_CONNECT, $streamContext);
+//
+//if ($apns)
+//{
+//  $apnsMessage = chr(0) . chr(0) . chr(32) . pack('H*', str_replace(' ', '', $deviceToken)) . chr(0) . chr(strlen($payload)) . $payload;
+//
+//  fwrite($apns, $apnsMessage);
+//
+//  fclose($apns);
+//}
+//else
+//{
+//  echo "Failed!";
+//  var_dump($error);
+//  var_dump($errorString);
+//}
+//        include "../parseUrl/parseUrl.php";
+//$content = <<<EOF
+//        BitlyTesting               cases:<br/>
+//        YouTube: http://www.youtube.com/watch?v=iRSqEL8xSVk&feature=plcp <br />
+//        Facebook: https://www.facebook.com/akay64** <br />
+//        Hotmail: http://by158w.bay158.mail.live.com/mail/InboxLight.aspx?n=1413803856#n=1960079250&fid=1&fav=1&mid=2e3a942b-d903-11e1-b45b-002264c2c15c&fv=1 <br />
+//        Twitter: https://twitter.com/#!/MachOSX <br />
+//        Twitter WWW: www.twitter.com/#!/MachOSX <br />
+//        Wiki: ( http://en.wikipedia.org/wiki/Kala_Namak)
+//EOF;
+//        echo make_clickable($content);
+//        echo "<br><br>";
+//        echo "<pre>";
+//        echo Model_Lib_Func::stripExtraSpace($content);
+//        echo "</pre>";
+//        
+//          $URLRegx = <<<REGX
+//            #(?<=[\s>])(\()?([\w]+?://(?:[\w\\x80-\\xff\#$%&~/=?@\[\](+-]|[.,;:!](?![\s<]|(\))?([\s]|$))|(?(1)\)(?![\s<.,;:]|$)|\)))+)#is
+//REGX;
+//ini_set('pcre.backtrack_limit', '104857600000000000000000000000000000000000000000000000000000000000000000000');
+//ini_set("pcre.recursion_limi", "100000000000"); // PHP default is 100,000.
+//echo preg_match_all($URLRegx, $content, $result); 
+//print_r($result);
+?>    

@@ -1,0 +1,116 @@
+<style>
+
+    table input {
+        width:700px;
+    }
+
+</style>
+<form action="/tipbox/tbadmincon/editqsg" method="POST"> 
+    <table id="hor-minimalist-b" class="userTable">
+        <th><div style="min-width: 350px; width: 350px;">Detail Name</div></th>
+        <th><div style="min-width: 350px; width: 350px;">Topics</div></th>
+
+        <?php
+        foreach ($this->topics as $topic) {
+
+            switch ($topic["qsgid"]) {
+                case 1:
+                    $lifestyle .= htmlentities($topic["content"]) . ", ";
+                    break;
+                case 2:
+                    $rel .= htmlentities($topic["content"]) . ", ";
+                    break;
+                case 3:
+                    $tech .= htmlentities($topic["content"]) . ", ";
+                    break;
+                case 4:
+                    $sports .= htmlentities($topic["content"]) . ", ";
+                    break;
+                case 5:
+                    $biz .= htmlentities($topic["content"]) . ", ";
+                    break;
+                case 6:
+                    $travel .= htmlentities($topic["content"]) . ", ";
+                    break;
+                case 7:
+                    $food .= htmlentities($topic["content"]) . ", ";
+                    break;
+                case 8:
+                    $games .= htmlentities($topic["content"]) . ", ";
+                    break;
+                case 9:
+                    $health .= htmlentities($topic["content"]) . ", ";
+                    break;
+                case 10:
+                    $fashion .= htmlentities($topic["content"]) . ", ";
+                    break;
+                case 11:
+                    $places .= htmlentities($topic["content"]) . ", ";
+                    break;
+                case 12:
+                    $arts .= htmlentities($topic["content"]) . ", ";
+                    break;
+                case 13:
+                    $edu .= htmlentities($topic["content"]) . ", ";
+                    break;
+            }
+        }
+        ?>
+        <tr>
+            <td>Lifestyle</td>
+            <td propertyName="fullname" itemid="<?= $this->user["id"]; ?>" itemType="user"><input name="1"  value="<?= $lifestyle; ?>"/></td>
+        </tr>   
+
+        <tr>
+            <td>Relationships</td>
+            <td propertyName="email" itemid="<?= $this->user["id"]; ?>" itemType="user"><input name="2" value="<?= $rel; ?>"/></td>
+        </tr>
+
+        <tr>
+            <td>Tech</td>
+            <td propertyName="username" itemid="<?= $this->user["id"]; ?>" itemType="user"><input name="3" value="<?= $tech; ?>"/></td>
+        </tr>
+        <tr>
+            <td>Sports</td>
+            <td  propertyName="bio" itemid="<?= $this->user["id"]; ?>" itemType="user"><input name="4" value="<?= $sports; ?>"/></td>
+        </tr>
+        <tr>
+            <td>Biz</td>
+            <td  propertyName="location" itemid="<?= $this->user["id"]; ?>" itemType="user"><input name="5" value="<?= $biz; ?>"/></td>
+        </tr>
+        <tr>
+            <td>Travel</td>
+            <td  propertyName="website" itemid="<?= $this->user["id"]; ?>" itemType="user"><input name="6" value="<?= $travel; ?>"/></td>
+        </tr>
+        <tr>
+            <td>Food</td>
+            <td  propertyName="FB" itemid="<?= $this->user["id"]; ?>" itemType="user"><input name="7" value="<?= $food; ?>"/></td>
+        </tr>
+        <tr>
+            <td>Games</td>
+            <td  propertyName="FB" itemid="<?= $this->user["id"]; ?>" itemType="user"><input name="8" value="<?= $games; ?>"/></td>
+        </tr>
+        <tr>
+            <td>Health</td>
+            <td  propertyName="FB" itemid="<?= $this->user["id"]; ?>" itemType="user"><input name="9" value="<?= $health; ?>"/></td>
+        </tr>
+        <tr>
+            <td>Fashion</td>
+            <td  propertyName="FB" itemid="<?= $this->user["id"]; ?>" itemType="user"><input name="10" value="<?= $fashion; ?>"/></td>
+        </tr>
+        <tr>
+            <td>Places</td>
+            <td  propertyName="FB" itemid="<?= $this->user["id"]; ?>" itemType="user"><input name="11" value="<?= $places; ?>"/></td>
+        </tr>
+        <tr>
+            <td>The arts</td>
+            <td  propertyName="FB" itemid="<?= $this->user["id"]; ?>" itemType="user"><input name="12" value="<?= $arts; ?>"/></td>
+        </tr>
+        <tr>
+            <td>Education</td>
+            <td  propertyName="FB" itemid="<?= $this->user["id"]; ?>" itemType="user"><input name="13" value="<?= $edu; ?>"/></td>
+        </tr>
+    </table>
+
+    <button type="submit" style="float:right;">Save QSG</button>
+</form>

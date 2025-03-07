@@ -1,0 +1,95 @@
+<script>
+
+//$(document).ready(function() {
+    
+    function deleteReports(tipid){
+        
+        var responce =confirm("Are you sure you want to delete all reports on this tip? This action cannot be rolled back.");
+                        
+        if (responce == true)
+        {
+            
+        }
+        else
+        {
+            return;
+                            
+        } 
+                        
+        $.ajax({
+            type:"POST",
+            url: "/tipbox/tbadmincon/deletereportsontip",
+            data: "tipid=" + encodeURIComponent(tipid),
+            error: function(e){
+                //alert(e);
+            },
+            success: function() {
+                $("#"+tipid).remove();
+            }
+        });
+    }
+
+</script>
+<span class="tableHeader">Total tips: <?= count($this->tips); ?></span>
+
+<table id="hor-minimalist-b" class="tipTable">
+    <tr>
+        <th>Tip&nbsp;id</th>
+        <th>Owner</th>
+        <th>Reasons</th>
+        <th>Tip</th>
+        <th>Topic</th>
+        <th>Reports</th>
+        <th>Time</th>
+        <th></th>
+    </tr>
+    <?php
+    foreach ($this->tips as $tip):
+
+        //Report counter
+
+        $spam = 0;
+        $offensive = 0;
+        $harmful = 0;
+        $copyr = 0;
+        $porn = 0;
+
+        foreach ($tip["reasonList"] as $reason) {
+            switch ($reason) {
+                case 1:
+                    $spam++;
+                    break;
+                case 2:
+                    $offensive++;
+                    break;
+                case 3:
+                    $harmful++;
+                    break;
+                case 4:
+                    $copyr++;
+                    break;
+                case 5:
+                    $porn++;
+                    break;
+            }
+        }
+        ?> 
+        <tr id="<?= $tip["id"]; ?>">
+            <td><?= $tip["id"]; ?></span></td>
+            <td><a href="/tipbox/tbadmincon/edituser?username=<?= $tip["tipOwnerUsername"]; ?>" target="_blank"><?= $tip["tipOwnerUsername"]; ?></a></td>
+            <td>
+                <?= ($spam) ? "Spam:&nbsp;{$spam}<br />" : ""; ?>
+                <?= ($offensive) ? "Offensive:&nbsp;{$offensive}<br />" : ""; ?>
+                <?= ($harmful) ? "Harmful:&nbsp;{$harmful}<br />" : ""; ?>
+                <?= ($copyr) ? "Copyr:&nbsp;{$copyr}<br />" : ""; ?>
+                <?= ($porn) ? "Porn:&nbsp;{$porn}<br />" : ""; ?>
+
+            </td>
+            <td class="edit" userid="<?= $tip["userid"]; ?>" propertyName="tip" itemid="<?= $tip["id"]; ?>" itemType="tip"><?= htmlentities($tip["content"]); ?></td>
+            <td class="edit" userid="<?= $tip["userid"]; ?>" propertyName="topic" itemid="<?= $tip["id"]; ?>" itemType="tip"><?= htmlentities($tip["topicContent"]); ?></td>
+            <td><?= $tip["reportCount"]; ?></td>
+            <td><?= Model_Lib_Func::relativeTimeShort(strtotime($tip["time"])); ?></td>
+            <td><span style="float:right;width: 40px;" onclick="deleteReports(<?= $tip["id"]; ?>);return false;"><input type="image" src="/graphics/en/admin/closeButton.png" title="Delete Report"/> </td>
+        </tr>
+    <?php endforeach; ?>
+</table>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US" id="scapehouse" class="<?= $this->pageClass; ?>">
+    <head <?= $this->facebookThingy; ?>>
+        <title id="pageTitle"><?= $this->pageTitle; ?></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-language" content="en" />
+        <meta name="description" content="We make cool software &amp; apps for your phones." />
+        <meta name="apple-itunes-app" content="app-id=963223746">
+		<link rel="icon" type="image/png" href="/graphics/ui/favicon.png" />
+        <link rel="apple-touch-icon" href="/graphics/ui/webclip_icon_hd.png" />
+
+        <!-- FB Open Graph Tags -->
+        <meta property="og:title" content="Scapehouse" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="We make cool software &amp; apps for your phones." />
+        <meta property="og:url" content="http://scapehouse.com" />
+        <meta property="og:image" content="http://scapehouse.com/graphics/ui/webclip_icon_hd.png" />
+        <meta property="og:site_name" content="Scapehouse" />
+        <meta property="fb:admins" content="1436629308" />
+
+        <!-- CSS Styles -->
+		<link href="/stylesheets/web/styles.css" media="screen" rel="stylesheet" type="text/css" />
+		<script src="/scripts/core.js" type="text/javascript"></script>
+        <?php if ($_SERVER["HTTP_HOST"] == "localhost"): ?>
+        <script src="/scripts/lib/jquery.js" type="text/javascript"></script>
+        <?php else: ?>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<?php endif; ?>
+
+        <!-- Gewgle Analytics -->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-28998607-2']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
+    <body>
+        <div class="pageOuterContainer">
+            <div id="pageSupport">
+                <div id="header">
+                    <div class="headerLinks">
+                        <a href="/corporate/about">about</a> • <a href="/corporate/contact">contact</a>
+                    </div>
+                    <a id="SHLogo" href="/" title="Home"></a>
+                </div>
+                <div class="content">
+                    <div id="mainWrapper">
+                        <noscript id="noJS"><div><h2>JavaScript is disabled in your browser</h2>Some features might not work properly. Enable JavaScript for a better web experience.</div></noscript>
+                        <div id="contentColumn">
+                            <?= $this->layout()->content; ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer">
+                    <p class="copyright">&copy; 2015 Scapehouse. be original.</p>
+                 </div>
+            </div>
+        </div>
+    </body>
+</html>

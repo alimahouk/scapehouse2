@@ -1,0 +1,1088 @@
+html.homepage {
+	background: url('../../../graphics/en/bgs/linen_bg.png') repeat;
+	min-height: 1100px;
+}
+
+html.homepage body {
+	min-height: 1101px;
+}
+
+html.homepage #pageSupport {
+	width: 1024px;
+}
+
+html.homepage .pageOuterContainer {
+	background: none;
+}
+
+html.homepage #header, html.homepage #footer {
+	display: none;
+}
+
+html.homepage #footer.custom {
+	padding-top: 12px;
+	position: static;
+}
+
+html.homepage #footer.custom #footerTopSeparator {
+	height: 12px;
+	left: 0;
+	margin-top: -12px;
+	position: absolute;
+	width: 100%;
+}
+
+html.homepage #footer.custom #footerOuterContainer {
+	height: 316px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+html.homepage #mainWrapper, html.homepage #contentColumn, html.homepage .content, html.homepage #pageSupport, html.homepage .pageOuterContainer {
+	height: 100%;
+	min-height: 1101px;
+}
+
+html.homepage .facadeInnerContainer {
+	padding-top: 30px;
+	position: relative;
+}
+
+html #noJS {
+	margin-top: 43px;
+}
+
+html.homepage .storeButton {
+	background: url('../../../graphics/en/sprites/app_store_button.png') no-repeat 0 0;
+	color: #fff;
+	display: block;
+	height: 63px;
+	margin: 10px auto 20px;
+	padding: 27px 0 0 75px;
+	position: relative;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #000;
+	width: 145px;
+	z-index: 1;
+}
+
+html.homepage .storeButton:active {
+	background: url('../../../graphics/en/sprites/app_store_button.png') no-repeat 0 -83px;
+	color: #b4b4b4;
+	text-shadow: 0 -1px 1px #000;
+}
+
+html.homepage .storeButton span {
+	display: block;
+	font-size: 23px;
+}
+
+html.tip #mainWrapper {
+	min-height: 300px;
+	position: relative;
+	padding: 200px 0 50px;
+}
+
+html.tip .appIdentifier .appIcon {
+	background: url('../../../graphics/en/icons/tipbox_icon_medium.png') no-repeat;
+	display: block;
+	height: 130px;
+	position: absolute;
+	width: 130px;
+}
+
+html.tip .appIdentifier {
+	margin: 20px auto 100px;
+	position: relative;
+	width: 510px;
+}
+
+html.tip .appIdentifier .comingSoon {
+	background: url('../../../graphics/en/UI/coming_soon_sticker.png') no-repeat;
+	height: 70px;
+	left: -30px;
+	position: absolute;
+	top: -30px;
+	width: 70px;
+	z-index: 99;
+}
+
+html.tip .appIdentifier h2.headline, html.tip .appIdentifier h2.headline a {
+	color: #5c5c5c;
+}
+
+html.tip .appIdentifier h2.headline {
+	font: bold 40px 'helvetica neue', helvetica, arial, sans-serif;
+	line-height: 48px;
+	margin: 0 0 10px 140px;
+	padding-top: 15px;
+	text-shadow: 0 2px 2px #fff;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+
+html.tip .appIdentifier h2.headline a:hover {
+	color: #0073b9;
+	text-decoration: none;
+}
+
+html.tip .appIdentifier h3.tagline {
+	color: #969696;
+	font: italic 20px georgia, 'times new roman', serif;
+	line-height: 48px;
+	margin: 0 0 0 145px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.tip .divider {
+	background: url('../../../graphics/en/UI/divider.png') no-repeat;
+	height: 137px;
+	position: absolute;
+	top: 390px;
+	width: 980px;
+}
+
+html.tip .viralButtons {
+	position: absolute;
+	right: 100px;
+	width: 50px;
+}
+
+html.tip .twitter-tweet {
+	margin-top: 10px;
+}
+
+html.tip .tip {
+	background: #e6e6e6 url('../../../graphics/en/bgs/paper_noise.png') repeat;
+	border: 1px solid #ccc;
+	font-size: 18px;
+	margin: 0 auto;
+	text-shadow: 0 1px 1px #fff;
+	-webkit-background-clip: padding-box;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 0 8px #000;
+	-moz-box-shadow: 0 0 8px #000;
+	-webkit-box-shadow: 0 0 8px #000;
+	width: 560px;
+}
+
+html.tip .tip .wrapper {
+	border: 1px solid #fff;
+	padding: 20px 20px 74px;
+	position: relative;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+html.tip .tip .userThmbnl {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	height: 69px;
+	margin: 2px 0 0 2px;
+	padding: 4px;
+	position: absolute;
+	box-shadow: 0 1px 2px #777;
+	-moz-box-shadow: 0 1px 2px #777;
+	-webkit-box-shadow: 0 1px 2px #777;
+	width: 69px;
+}
+
+html.tip .tip h2.name {
+	font: bold 32px 'helvetica neue', helvetica, arial, sans-serif;
+	margin: 0 0 10px 100px;
+	-webkit-font-smoothing: antialiased;
+}
+
+html.tip .tip h3.username {
+	border-bottom: 1px solid #f9c1ca;
+	color: #9d9d9d;
+	font: 30px 'helvetica neue', helvetica, arial, sans-serif;
+	margin: 0;
+	padding: 0 0 20px 100px;
+}
+
+html.tip .tip .star {
+	background: url('../../../graphics/en/icons/genius_star.png') no-repeat;
+	display: inline-block;
+	height: 32px;
+	margin: 0 0 -3px 8px;
+	width: 32px;
+}
+
+html.tip .tip .timestamp {
+	background: url('../../../graphics/en/icons/clock_grey.png') no-repeat;
+	color: #9d9d9d;
+	font-size: 28px;
+	height: 32px;
+	padding-left: 35px;
+	position: absolute;
+	right: 20px;
+	top: 50px;
+}
+
+html.tip .tip .tipTxt {
+	min-height: 52px;
+	position: relative;
+}
+
+html.tip .tip p {
+	font: 24px 'helvetica neue', helvetica, arial, sans-serif;
+	line-height: 32px;
+	margin: 20px 0 0;
+}
+
+html.tip .tip .topicStrip {
+	background: #cacac7 url('../../../graphics/en/icons/topics_icon_large.png') no-repeat 20px -3px;
+	bottom: 0;
+	font: 28px georgia, "times new roman", serif;
+	left: 0;
+	padding: 12px 10px 12px 90px;
+	position: absolute;
+	text-shadow: 0 1px 1px #fff;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	width: 458px;
+}
+
+html.tip h3.usefulnessMeter {
+	color: #919191;
+	font-size: 14px;
+	margin: 30px 0 20px 230px;
+	text-transform: uppercase;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.tip .facemash {
+	background: #e6e6e6 url('../../../graphics/en/bgs/paper_noise.png') repeat;
+	border: 1px solid #ccc;
+	font-size: 18px;
+	margin: 0 auto;
+	padding: 7px 7px 5px;
+	text-shadow: 0 1px 1px #fff;
+	-webkit-background-clip: padding-box;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 0 4px #000;
+	-moz-box-shadow: 0 0 4px #000;
+	-webkit-box-shadow: 0 0 4px #000;
+	width: 505px;
+}
+
+html.tip .facemash .photoWrapper {
+	background: url('../../../graphics/en/UI/beige_user_icon_overlay.png') no-repeat;
+	cursor: default;
+	height: 52px;
+	width: 50px;
+}
+
+html.tip .facemash img {
+	display: block;
+	height: 50px;
+	width: 50px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+html.tip .category {
+	background: url('../../../graphics/en/bgs/bg_paper_texture.png') repeat;
+	border: 1px solid #ccc;
+	color: #919191;
+	margin: 50px auto 0;
+	padding: 5px;
+	text-align: center;
+	text-shadow: 0 1px 1px #fff;
+	width: 510px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: inset 0 0 8px #000;
+	-moz-box-shadow: inset 0 0 8px #000;
+	-webkit-box-shadow: inset 0 0 8px #000;
+}
+
+html.tip .category h3 {
+	font-size: 14px;
+	font-weight: normal;
+	font-style: italic;
+	margin: 10px 0;
+}
+
+html.tip .category .icon {
+	height: 40px;
+	margin: 10px auto;
+	width: 40px;
+}
+
+html.tip .category.thing .icon {
+	background: url('../../../graphics/en/UI/category_thing.png') no-repeat;
+}
+
+html.tip .category.place .icon {
+	background: url('../../../graphics/en/UI/category_place.png') no-repeat;
+}
+
+html.tip .category.idea .icon {
+	background: url('../../../graphics/en/UI/category_idea.png') no-repeat;
+}
+
+html.forgotPass #mainWrapper {
+	position: relative;
+	padding: 250px 0 60px;
+}
+
+html.forgotPass .UIContainer {
+	background: #e6e6e6 url('../../../graphics/en/bgs/paper_noise.png') repeat;
+	border: 1px solid #ccc;
+	font-size: 18px;
+	margin: 0 auto;
+	text-shadow: 0 1px 1px #fff;
+	-webkit-background-clip: padding-box;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 0 8px #000;
+	-moz-box-shadow: 0 0 8px #000;
+	-webkit-box-shadow: 0 0 8px #000;
+	width: 560px;
+}
+
+html.forgotPass .wrapper {
+	border: 1px solid #fff;
+	padding: 20px;
+	position: relative;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+html.forgotPass .errorStrip {
+	background: #ffadad url('../../../graphics/en/icons/attention.png') no-repeat 10px 5px;
+	margin: -20px -20px 10px;
+	padding: 20px 20px 20px 80px;
+}
+
+html.forgotPass .errorStrip h4 {
+	font: normal 24px georgia;
+	margin: 0;
+}
+
+html.forgotPass .UIHeader {
+	border-bottom: 1px dashed #f9c1ca;
+	margin: 0 10px;
+	padding: 20px 20px 15px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.forgotPass .UIHeader h2 {
+	font: 24px "helvetica neue", helvetica, arial, sans-serif !important;
+	line-height: normal !important;
+	margin: 0 !important;
+	padding-top: 0 !important;
+}
+
+html.forgotPass #passwdForm {
+	margin: 0 auto;
+	padding: 20px 30px;
+	width: 330px;
+}
+
+html.forgotPass #passwdForm .UILabel {
+	color: #919191;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.forgotPass #passwdForm .inputContainer {
+	margin: 5px 0;
+	-webkit-box-shadow: 0 1px 1px #fff;
+}
+
+html.forgotPass #passwdForm .UITextInput {
+	font-size: 12px;
+	padding: 5px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: inset 0 0 3px #ccc;
+	-moz-box-shadow: inset 0 0 3px #ccc;
+	-webkit-box-shadow: inset 0 0 3px #ccc;
+	width: 320px;
+}
+
+html.forgotPass #passwdForm textarea {
+	display: block;
+	min-height: 60px;
+	overflow-y: auto;
+	resize: none;
+}
+
+html.forgotPass #passwdForm .UIPanel {
+	margin: 20px 0 0;
+	padding: 10px 0;
+}
+
+html.productPage #contentColumn {
+	margin-bottom: 70px;
+}
+
+html.productPage.metromate #appIcon {
+	background: url('../../../graphics/en/UI/metromate_app.png') no-repeat;
+	float: left;
+	height: 120px;
+	margin: 25px 0 0 55px;
+	width: 118px;
+}
+
+html.productPage.shelf #appIcon {
+	background: url('../../../graphics/en/icons/shelf_icon_medium.png') no-repeat;
+	float: left;
+	height: 174px;
+	margin: -5px 0 0 55px;
+	width: 187px;
+}
+
+html.productPage #contentColumn h2 {
+	font: 40px "helvetica neue", helvetica, arial, sans-serif;
+	line-height: 48px;
+	margin: 55px 0 10px 280px;
+	padding-top: 30px;
+	text-shadow: 0 1px 1px #fff;
+	-webkit-font-smoothing: antialiased;
+}
+
+html.productPage #contentColumn h4.headline {
+	color: #474747;
+	font: 21px "helvetica neue", helvetica, arial, sans-serif;
+	line-height: 40px;
+	margin: 15px 0 10px 280px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.productPage.metromate .mainImage {
+	background: url('../../../graphics/en/imgs/shot_metromate_1.png') no-repeat;
+	height: 897px;
+	margin: 85px 0 0 240px;
+	width: 508px;
+}
+
+html.productPage.shelf .mainImage {
+	background: url('../../../graphics/en/imgs/shot_shelf_1.png') no-repeat;
+	height: 831px;
+	margin: 85px 0 10px -40px;
+	width: 1072px;
+}
+
+html.productPage.shelf .minSysRequirements, html.productPage.shelf .disclaimer {
+	color: #919191;
+	font-size: 11px;
+	text-align: center;
+}
+
+html.productPage.shelf .disclaimer {
+	display: block;
+	margin-top: 50px;
+}
+
+html.productPage .feature {
+	margin: 50px 0;
+}
+
+html.productPage .feature h3 {
+	color: #474747;
+	font: 22px "helvetica neue", helvetica, arial, sans-serif;
+	margin: 10px 0;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.productPage .feature p {
+	color: #777;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+html.productPage .feature.left h3, html.productPage .feature.left p {
+	margin-left: 278px;
+}
+
+html.productPage .feature.right h3, html.productPage .feature.right p {
+	margin-right: 278px;
+}
+
+html.productPage.metromate .feature.timings {
+	background: url('../../../graphics/en/imgs/metromate_timings.png') no-repeat 750px -5px;
+	padding: 10px 0 20px;
+}
+
+html.productPage.metromate .feature.stations {
+	background: url('../../../graphics/en/imgs/metromate_stations.png') no-repeat 0px -10px;
+	padding: 10px 0 20px;
+}
+
+html.productPage.metromate .feature.lastTrain {
+	background: url('../../../graphics/en/imgs/metromate_last_train.png') no-repeat 650px 55px;
+	padding: 95px 0;
+}
+
+html.productPage.metromate .feature.nol {
+	background: url('../../../graphics/en/imgs/metromate_nol.png') no-repeat 0px 35px;
+	padding: 50px 0;
+}
+
+html.productPage.metromate .feature.design {
+	background: url('../../../graphics/en/imgs/metromate_design.png') no-repeat 700px 10px;
+	padding: 10px 0;
+}
+
+html.productPage.metromate .feature.offline {
+	background: url('../../../graphics/en/imgs/metromate_offline.png') no-repeat 20px 0px;
+	padding: 35px 0;
+}
+
+html.productPage.shelf .feature.documents {
+	background: url('../../../graphics/en/imgs/shelf_documents.png') no-repeat 50px 10px;
+	padding: 10px 0 20px;
+}
+
+html.productPage.shelf .feature.directories {
+	background: url('../../../graphics/en/imgs/shelf_dirs.png') no-repeat 710px 10px;
+	padding: 10px 0 20px;
+}
+
+html.productPage.shelf .feature.thumbnails {
+	background: url('../../../graphics/en/imgs/shelf_thumbs.png') no-repeat 0px 0;
+	padding: 95px 0;
+}
+
+html.productPage.shelf .feature.retina {
+	background: url('../../../graphics/en/imgs/shelf_retina.png') no-repeat 690px -40px;
+	padding: 95px 0;
+}
+
+html.productPage .storeButton {
+	color: #fff;
+	display: block;
+	height: 60px;
+	margin: 10px auto 20px;
+	padding: 27px 0 0 75px;
+	position: relative;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #000;
+	width: 145px;
+	z-index: 1;
+}
+
+html.productPage .storeButton:active {
+	color: #b4b4b4;
+	text-shadow: 0 -1px 1px #000;
+}
+
+html.productPage.metromate .storeButton {
+	background: url('../../../graphics/en/sprites/app_store_button.png') no-repeat 0 -1px;
+}
+
+html.productPage.metromate .storeButton:active {
+	background: url('../../../graphics/en/sprites/app_store_button.png') no-repeat 0 -84px;
+	color: #b4b4b4;
+	text-shadow: 0 -1px 1px #000;
+}
+
+html.productPage.shelf .storeButton {
+	background: url('../../../graphics/en/sprites/mac_app_store_button.png') no-repeat 0 -1px;
+}
+
+html.productPage.shelf .storeButton:active {
+	background: url('../../../graphics/en/sprites/mac_app_store_button.png') no-repeat 0 -84px;
+	color: #b4b4b4;
+	text-shadow: 0 -1px 1px #000;
+}
+
+html.productPage .storeButton span {
+	display: block;
+	font-size: 23px;
+}
+
+html.productPage .viralButtons {
+	margin: 55px 0 0;
+	text-align: center;
+}
+
+html.utilPage #mainWrapper {
+	min-height: 300px;
+	position: relative;
+	padding-bottom: 50px;
+}
+
+html.utilPage .tip {
+	background: #e6e6e6 url('../../../graphics/en/bgs/paper_noise.png') repeat;
+	border: 1px solid #ccc;
+	font-size: 18px;
+	margin: 50px auto 0;
+	text-shadow: 0 1px 1px #fff;
+	-webkit-background-clip: padding-box;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 0 8px #000;
+	-moz-box-shadow: 0 0 8px #000;
+	-webkit-box-shadow: 0 0 8px #000;
+	width: 560px;
+}
+
+html.utilPage .tip .wrapper {
+	border: 1px solid #fff;
+	padding: 20px 20px 74px;
+	position: relative;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+html.utilPage .tip .thumbnl {
+	background: #fff url('../../../graphics/en/UI/tipbox_bg.png') no-repeat 2px 2px;
+	border: 1px solid #ccc;
+	float: left;
+	height: 69px;
+	margin: 2px 0 0 2px;
+	box-shadow: 0 1px 2px #999;
+	-moz-box-shadow: 0 1px 2px #999;
+	-webkit-box-shadow: 0 1px 2px #999;
+	width: 69px;
+}
+
+html.utilPage .tip .bulb {
+	background: url('../../../graphics/en/UI/tipbox_bulb.png') no-repeat;
+	height: 65px;
+	margin: 2px 0 0 2px;
+	width: 65px;
+}
+
+html.utilPage .tip .bulb.off {
+	background-position: 0 -65px;
+}
+
+html.utilPage .tip h2.name {
+	font: bold 32px 'helvetica neue', helvetica, arial, sans-serif;
+	margin: 0 0 10px 90px;
+	-webkit-font-smoothing: antialiased;
+}
+
+html.utilPage .tip h3.username {
+	border-bottom: 1px solid #f9c1ca;
+	color: #9d9d9d;
+	font: 30px 'helvetica neue', helvetica, arial, sans-serif;
+	margin: 0;
+	padding: 0 0 20px 90px;
+}
+
+html.utilPage .tip h2.name a {
+	color: #333;
+}
+
+html.utilPage .tip h3.username a {
+	color: #9d9d9d;
+}
+
+html.utilPage .tip h2.name a:hover, html.utilPage .tip h3.username a:hover {
+	color: #0073b9;
+	text-decoration: none;
+}
+
+html.utilPage .tip .tipTxt {
+	min-height: 52px;
+	position: relative;
+}
+
+html.utilPage .tip p {
+	font: 24px 'helvetica neue', helvetica, arial, sans-serif;
+	line-height: 32px;
+	margin: 20px 0 0;
+}
+
+html.utilPage .tip .topicStrip {
+	background: #cacac7 url('../../../graphics/en/icons/topics_icon_large.png') no-repeat 20px -3px;
+	bottom: 0;
+	font: 28px georgia, "times new roman", serif;
+	left: 0;
+	padding: 12px 10px 12px 90px;
+	position: absolute;
+	text-shadow: 0 1px 1px #fff;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	width: 458px;
+}
+
+html.applicationError h2 {
+	background-color: #e8e8e8;
+	border: 1px solid #ccc;
+	margin: 100px auto 50px;
+	padding: 10px;
+	text-shadow: 0 1px 1px #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0px 0px 5px #ccc;
+	-moz-box-shadow: 0px 0px 5px #ccc;
+	-webkit-box-shadow: 0px 0px 5px #ccc;
+	width: 505px;
+}
+
+html.applicationError h2 span {
+	display: block;
+	font-size: 12px;
+	font-weight: normal;
+	margin-top: 5px;
+}
+
+html.corporate #contentColumn {
+	margin-bottom: 70px;
+}
+
+html.corporate #contentColumn h2 {
+	font: 40px "helvetica neue", helvetica, arial, sans-serif;
+	line-height: 48px;
+	padding-top: 30px;
+	-webkit-font-smoothing: antialiased;
+}
+
+html.corporate #contentColumn h2, html.corporate #contentColumn p {
+	margin: 10px 0;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.corporate #contentColumn h3 {
+	border-bottom: 1px dashed #e6e6e6;
+	clear: both;
+	color: #474747;
+	font: 18px "helvetica neue", helvetica, arial, sans-serif;
+	line-height: 48px;
+	margin: 10px 0;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.corporate #contentColumn p, html.corporate #contentColumn ul, html.corporate #contentColumn ol {
+	color: #777;
+	font-size: 15px;
+	line-height: 20px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.corporate #contentColumn .decorationPhoto {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	max-width: 200px;
+	padding: 5px;
+	box-shadow: 0px 0px 5px #ccc;
+	-moz-box-shadow: 0px 0px 5px #ccc;
+	-webkit-box-shadow: 0px 0px 5px #ccc;
+}
+
+html.corporate #contentColumn .decorationPhoto.left {
+	float: left;
+	margin: 5px 10px 10px 5px;
+}
+
+html.corporate #contentColumn ul {
+	list-style-type: square;
+}
+
+html.corporate #contentColumn ul li {
+	color: #00ad00;
+}
+
+html.corporate #contentColumn li h4 {
+	color: #333;
+	margin: 20px 0 0;
+}
+
+html.corporate .divider {
+	background: url('../../../graphics/en/UI/divider.png') no-repeat;
+	height: 137px;
+	width: 980px;
+}
+
+html.corporate .footnote {
+	border-top: 1px dashed #ccc;
+	display: block;
+	font-size: 12px;
+	padding-top: 6px;
+}
+
+html.portfolio .projects {
+	overflow: hidden;
+	padding: 5px;
+}
+
+html.portfolio .project {
+	background-color: #f7f7f7;
+	border: 1px solid #ccc;
+	margin: 20px 0;
+	overflow: hidden;
+	padding: 10px;
+	text-shadow: 0 1px 1px #fff;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 0 5px #ccc;
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+}
+
+html.portfolio .project .mainPreview {
+	display: block;
+	text-align: center;
+}
+
+html.portfolio .project .mainPreview img {
+	max-width: 949px;
+}
+
+html.portfolio .project .thumbnails {
+	margin: 0 -5px -10px;
+	overflow: hidden;
+	text-align: center;
+}
+
+html.portfolio .project .thumbnail {
+	display: inline-block;
+	margin: 10px 5px;
+} 
+
+html.portfolio .project .thumbnail img {
+	border: 1px solid #ccc;
+	display: block;
+	height: 110px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 0 5px #ccc;
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+}
+
+html.portfolio .project .thumbnail.active img {
+	border: 1px solid #fbcf3b;
+}
+
+html.portfolio .project h4 {
+	font: bold 22px 'Helvetica Neue', Helvetica, 'Lucida grande', Verdana, Arial, sans-serif;
+	margin: 10px 0;
+}
+
+html.portfolio .project h5 {
+	color: #009900;
+	font: italic 16px Georgia, times, serif;
+	margin: 10px 0;
+}
+
+html.portfolio .project .description {
+	border-bottom: 1px solid #fff;
+	display: block;
+	font-size: 14px;
+	line-height: 20px;
+	margin: -10px -10px -9px;
+	padding: 10px;
+}
+
+html.portfolio .project .gotoProject {
+	background-color: #dadbdd;
+	border-top: 1px solid #777;
+	display: block;
+	font-size: 16px;
+	margin: 10px -10px -10px;
+	padding: 15px 0;
+	text-align: center;
+	box-shadow: inset 0 0 5px #777;
+	-moz-box-shadow: inset 0 0 5px #777;
+	-webkit-box-shadow: inset 0 0 5px #777;
+}
+
+html.portfolio .project .gotoProject:hover {
+	background-color: #fff;
+}
+
+html.portfolio .divider {
+	margin: 70px 0 0;
+}
+
+html.portfolio .contactArea {
+	background: url('../../../graphics/en/bgs/bg_paper_texture.png') repeat;
+	border: 1px solid #ccc;
+	color: #919191;
+	font-size: 20px;
+	margin: -60px auto 0;
+	padding: 30px;
+	text-align: center;
+	text-shadow: 0 1px 1px #fff;
+	width: 510px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: inset 0 0 8px #000;
+	-moz-box-shadow: inset 0 0 8px #000;
+	-webkit-box-shadow: inset 0 0 8px #000;
+}
+
+html.portfolio .envelope {
+	background: url('../../../graphics/en/icons/mail_32px.png') no-repeat;
+	display: block;
+	height: 32px;
+	margin: 20px auto 0;
+	width: 32px;
+}
+
+html.contact #contentArea {
+	margin: 70px 100px 85px;
+	position: relative;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.contact .envelope {
+	background: url('../../../graphics/en/UI/classic_envelope_pattern.png') no-repeat;
+	height: 483px;
+	margin: -20px 0 0 75px;
+	position: absolute;
+	width: 840px;
+}
+
+html.contact .UIHeader {
+	background: url('../../../graphics/en/icons/mail_32px.png') no-repeat 160px 18px;
+	border-bottom: 1px dashed #f9c1ca;
+	margin: 0 10px;
+	padding: 20px 200px 15px 210px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.contact .UIHeader h2 {
+	font: 24px "helvetica neue", helvetica, arial, sans-serif !important;
+	line-height: normal !important;
+	margin: 0 !important;
+	padding-top: 0 !important;
+}
+
+html.contact .UIHeader p {
+	margin: 5px 0 0;
+}
+
+html.contact #contactForm {
+	margin: 0 auto;
+	padding: 20px 30px;
+	width: 330px;
+}
+
+html.contact #contactForm .UILabel {
+	color: #919191;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.contact #contactForm .inputContainer {
+	margin: 5px 0;
+	-webkit-box-shadow: 0 1px 1px #fff;
+}
+
+html.contact #contactForm .UITextInput, html.contact #contactForm textarea {
+	font-size: 12px;
+	padding: 5px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: inset 0 0 3px #ccc;
+	-moz-box-shadow: inset 0 0 3px #ccc;
+	-webkit-box-shadow: inset 0 0 3px #ccc;
+	width: 320px;
+}
+
+html.contact #contactForm textarea {
+	display: block;
+	min-height: 60px;
+	overflow-y: auto;
+	resize: none;
+}
+
+html.contact #contactForm .UIPanel {
+	margin: 20px 0 0;
+	padding: 10px 0;
+}
+
+.recipientInfo {
+	bottom: 20px;
+	position: absolute;
+	right: 20px;
+}
+
+.recipientInfo p {
+	font: 11px 'Droid Serif', serif !important;
+	line-height: 11px !important;
+	margin: 5px 0 !important;
+}
+
+html.contact .runwayMarker {
+	background: url('../../../graphics/en/UI/runway_marker.png') no-repeat;
+	height: 64px;
+	position: absolute;
+	right: 30px;
+	top: 430px;
+	width: 64px;
+}
+
+html.contact .divider {
+	position: absolute;
+}
+
+html.contact .divider.upper {
+	top: 385px;
+}
+
+html.contact .divider.lower {
+	top: 850px;
+}
+
+html.contact h3.thanks {
+	border: 0 !important;
+	color: #777;
+	font: 32px "helvetica neue", helvetica, arial, sans-serif !important;
+	left: 50%;
+	margin: 0 0 0 -150px !important;
+	padding: 0 !important;
+	position: absolute;
+	text-align: center;
+	text-shadow: 0 1px 1px #fff;
+	top: 430px;
+	width: 300px;
+}
+
+html.contact .thanks.main {
+	border: 0 !important;
+	color: #333 !important;
+	font-size: 40px !important;
+	margin-left: -150px !important;
+	top: 430px;
+}
+
+html.contact .theLove {
+	background: url('../../../graphics/en/icons/heart_faded_16px.png') no-repeat 0 0;
+	height: 16px;
+	left: 50%;
+	margin-left: -8px;
+	position: absolute;
+	top: 670px;
+	width: 17px;
+}

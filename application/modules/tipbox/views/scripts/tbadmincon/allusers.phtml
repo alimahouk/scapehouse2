@@ -1,0 +1,29 @@
+<span class="tableHeader">Total users: <?= count($this->users);?></span>
+<a href="/tipbox/tbadmincon/createuser" style="margin:20px;">Create new user</a>
+<table id="hor-minimalist-b" class="tipTable">
+    <tr>
+        <th>User&nbsp;id</th>
+        <th>Fullname</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Bio</th>
+        <th>Location</th>
+        <th>Website</th>
+        <th>FB</th>
+        <th>Time</th>
+    </tr>
+    <?php foreach($this->users as $user): ?>
+    <tr>
+        <td><?=$user["id"];?></td>
+        <td><a href="/tipbox/tbadmincon/edituser?username=<?= $user["username"]; ?>" target="_blank">
+<?=  str_replace(" ", "&nbsp;", $user["fullname"]);?> </a></td>
+        <td><?=(strlen($user["email"]) > 13)?substr($user["email"], 0, 13)."...":$user["email"];?></td>
+        <td><?=$user["username"];?></td>
+        <td><?=$user["bio"];?></td>
+        <td><?=$user["location"];?></td>
+        <td><?=$user["website"];?></td>
+        <td><?=$user["fbConnected"];?></td>
+        <td><?= Model_Lib_Func::relativeTimeShort(strtotime($user["time"]));?></td> 
+    </tr>
+    <?php endforeach; ?>
+</table>

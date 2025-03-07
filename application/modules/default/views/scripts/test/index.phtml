@@ -1,0 +1,365 @@
+<script>
+$(document).ready(function() {
+	
+	$('.UIButton.ignore', '.reports').click(function() {
+		var entryHook = $(this).parents('.tableEntry').attr('id');
+		ignoreReport(entryHook.replace(/R/, ''))
+		return false;
+	});
+	
+	$('.adminControl').click(function() {
+		$('#dashboard').slideDown('medium');
+		$('#mainIO').focus();
+		return false;
+	});
+	
+	$('#dashboard').click(function() {
+		$('#mainIO').focus();
+	});
+	
+});
+</script>
+<style>	
+	#SHMemberCounter {
+		background-color: #0073b9;
+	    border: 3px solid #198ecf;
+		color: #fff;
+		font-size: 32px;
+		margin: 3px auto 50px;
+		padding: 10px;
+		text-align: center;
+		text-shadow: 0 1px 1px #000;
+		background-clip: padding-box;
+		-webkit-background-clip: padding-box;
+		-moz-background-clip: padding-box;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-box-shadow: 0 0 3px #000;
+		-moz-box-shadow: 0 0 3px #000;
+		box-shadow: 0 0 3px #000;
+		width: 500px;
+	}
+	
+	.UINumberGiant {
+		font-size: 48px;
+	}
+	
+	.userPresencePanel {
+		border-top: 1px dashed #e6e6e6;
+		padding: 6px 5px;
+	}
+	
+	.userPresencePanel h3 {
+		font-size: 12px;
+		margin: 0 0 5px;
+	}
+	
+	.dashboardButtonPanel {
+		background-color: #f2f2f2;
+		border-top: 1px solid #ccc;
+		overflow: hidden;
+		padding: 10px 5px;
+		position: relative;
+		text-align: center;
+	}
+	
+	.dashboardButtonPanel .UIButton {
+		float: left;
+		margin-right: 5px;
+	}
+	
+	.UISearchInput {
+		background: #fff url('../../../graphics/en/icons/magnifier_left.png') no-repeat 3px 3px;
+		left: 50%;
+		margin-left: -179px;
+		padding: 3px 3px 3px 24px;
+		position: absolute;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-box-shadow: 0 0 3px #ccc;
+		-moz-box-shadow: 0 0 3px #ccc;
+		box-shadow: 0 0 3px #ccc;
+		width: 300px;
+	}
+	
+	.usersTable {
+		font-size: 12px;
+		width: 100%;
+		border-collapse: collapse;
+		clear: both;
+	}
+
+	.usersTable thead {
+		background: -webkit-gradient(linear, left top, left bottom, from(#c2c2c2), to(#828282));
+		background: -moz-linear-gradient(top, #c2c2c2, #828282);
+		text-shadow: #000 0 -1px 1px;
+	}
+
+	.usersTable thead th {
+		border-left: 1px solid #ccc;
+		padding: 5px;
+	}
+
+	.usersTable thead :first-child {
+		border: 0;
+	}
+
+	.usersTable .UIColumn {
+		color: #fafafa;
+	}
+
+	.usersTable .firstName, .usersTable .lastName, .usersTable .username {
+		min-width: 30px;
+		max-width: 30px;
+	}
+	
+	.usersTable .email {
+		min-width: 40px;
+		max-width: 40px;
+	}
+	
+	.usersTable .join {
+		min-width: 20px;
+		max-width: 20px;
+	}
+	
+	.usersTable .sex {
+		font-weight: bold;
+		text-align: center;
+		width: 20px;
+	}
+	
+	.usersTable .reason {
+		min-width: 80px;
+		max-width: 80px;
+	}
+	
+	.usersTable .actions {
+		min-width: 82px;
+		max-width: 82px;
+	}
+
+	.usersTable td {
+		border: 1px solid #ccc;
+		margin: 0;
+		overflow: hidden;
+		padding: 4px 5px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.usersTable tbody tr {
+	  	background-color: #fff;
+		-webkit-transition: 200ms background-color ease-in-out, 200ms color ease-in-out;
+		-moz-transition: 200ms background-color ease-in-out, 200ms color ease-in-out;
+	}
+
+	.usersTable tbody tr:hover {
+	  	background-color: #0400e0 !important;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	.usersTable tbody tr:nth-child(2n+1) {
+	  	background-color: #e9e5ff;
+	}
+	
+	.reports h3 {
+		background-color: #f2f2f2;
+		font-size: 12px;
+		margin: 0;
+		padding: 10px 5px;
+	}
+	
+	.adminControl {
+		background: #d9ae2b url('../../../graphics/en/bgs/caution_tape.png') repeat-x;
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+		color: #000;
+		display: block;
+		font-size: 16px;
+		font-weight: bold;
+		padding: 7px 0;
+		text-align: center;
+		text-transform: uppercase;
+		text-shadow: 0 -1px 1px #fff;
+		-webkit-box-shadow: 0 0 10px #000;
+	}
+	
+	.adminControl:hover {
+		text-decoration: none;
+	}
+	
+	.adminControl span {
+		background-color: #d9ae2b;
+		border: 1px solid #000;
+		display: inline-block;
+		padding: 2px 4px;
+	}
+	
+	#dashboard {
+		background: #0000aa -webkit-gradient(linear, 0 0, 0 100%, from(#4f1aff), to(#0000aa));
+		border-top: 1px solid #0000aa;
+		border-bottom: 1px solid #0000aa;
+		color: #fff;
+		font: 14px Courier;
+		overflow: hidden;
+		padding: 10px;
+		-webkit-box-shadow: inset 0 0 8px #000;
+	}
+	
+	#dashboard h3 {
+		background-color: #aaa;
+		color: #0000aa;
+		margin: 0 auto 10px;
+		padding: 2px 4px;
+		width: 60px;
+		-webkit-box-shadow: 0 0 5px #aaa;
+	}
+	
+	#dashboard p {
+		float: left;
+		clear: left;
+		line-height: 16px;
+		margin: 0;
+		text-shadow: 0 0 5px #fff;
+	}
+	
+	#mainIO {
+		background-color: transparent;
+		border: 0;
+		color: #fff;
+		float: left;
+		font: 13px Courier;
+		line-height: 16px;
+		margin: 0;
+		text-shadow: 0 0 5px #fff;
+		width: 930px;
+	}
+</style>
+<?php
+//$userTable = new Model_DbTable_User();
+//$userCount = $userTable->countUsers();
+
+//$allUsers = $userTable->getUsers($offset);
+?>
+<div id="SHMemberCounter">
+	<div class="UINumberGiant"><?=$userCount;?></div>
+	<span class="lexicon">members</span>
+</div>
+<div class="userPresencePanel">
+	<div class="boxHeader">
+		<h3>Users Online <span class="counter">(0)</span></h3>
+	</div>
+	<div class="noPresence hidden">No one's online.</div>
+	<div class="facemash presenceFacemash">
+		<div class="innerContainer">
+		</div>
+		<div class="paperweight"></div>
+	</div>
+</div>
+<div class="dashboardButtonPanel">
+	<a href="#" class="UIButton large grey rebuildCSS"><span class="UIButtonTxt">Rebuild CSS</span></a>
+	<a href="#" class="UIButton large grey rebuildJS"><span class="UIButtonTxt">Rebuild JavaScript</span></a>
+	<input type="text" class="UITextInput UISearchInput" placeholder="Search" />
+</div>
+<table class="usersTable" id="userListTable">
+
+	<thead>
+		<tr class="UITableHeader">
+			<th scope="col" class="UIColumn firstName">First Name</th>
+			<th scope="col" class="UIColumn lastName">Last Name</th>
+			<th scope="col" class="UIColumn username">Username</th>
+			<th scope="col" class="UIColumn email">Email</th>
+			<th scope="col" class="UIColumn join">Joined on</th>
+			<th scope="col" class="UIColumn sex">Sex</th>
+			<th scope="col" class="UIColumn actions">Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+      <?php foreach($allUsers as $user): ?>
+		<tr class="tableEntry">
+			<td class="firstName"><?= $user["firstname"]; ?></td>
+			<td class="lastName"><?= $user["lastname"]; ?></td>
+			<td class="username"><?= $user["username"]; ?></td>
+			<td class="email"></td>
+			<td class="join">---</td>
+			<td class="sex"><?= strtoupper($user["sex"]); ?></td>
+			<td class="actions">
+				<a href="#" class="UIButton grey control"><span class="UIButtonTxt">Take Control</span></a>
+				<a href="#" class="UIButton green elite hidden"><span class="UIButtonTxt">Elite</span></a>
+				<a href="#" class="UIButton blue verified hidden"><span class="UIButtonTxt">Verified</span></a>
+				<a href="#" class="UIButton red deleteUser hidden"><span class="UIButtonTxt">Delete</span></a>
+				<a href="#" class="UIButton red banUser hidden"><span class="UIButtonTxt">Ban</span></a>
+			</td>
+		</tr>
+     <?php endforeach; ?>
+       </tbody>
+</table>
+<div class="reports">
+	<?php  
+	        //$reportTable = new Model_DbTable_Report();
+	        //$reports = $reportTable->getReports();
+	?>
+	<div class="UIHeader">
+		<h3>Reports</h3>
+	</div>
+	<table class="usersTable" id="reportsTable">
+		<thead>
+			<tr class="UITableHeader">
+				<th scope="col" class="UIColumn firstName">First Name</th>
+				<th scope="col" class="UIColumn lastName">Last Name</th>
+				<th scope="col" class="UIColumn username">Username</th>
+				<th scope="col" class="UIColumn reason">Reason</th>
+				<th scope="col" class="UIColumn actions">Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php 
+            if ($reports) {
+            foreach($reports as $report): 
+				
+				$realReason;
+
+				if ($report["reason"] == 1) {
+					$realReason = "Cyber bullying";
+				} else if ($report["reason"] == 2) {
+					$realReason = "Copyright infringement";
+				} else if ($report["reason"] == 3) {
+					$realReason = "Porn";
+				} else if ($report["reason"] == 4) {
+					$realReason = "Racism";
+				} else if ($report["reason"] == 5) {
+					$realReason = "Spam";
+				}
+			?>
+			<tr class="tableEntry" id="R<?= $report["subjectid"]; ?>">
+				<td class="firstName"><?= $report["firstname"]; ?></td>
+				<td class="lastName"><?= $report["lastname"]; ?></td>
+				<td class="username">@<?= $report["username"]; ?></td>
+				<td class="reason"><?= $realReason; ?></td>
+				<td class="actions">
+					<a href="/<?= $report["username"]; ?>" class="UIButton green check"><span class="UIButtonTxt">Investigate</span></a>
+					<a href="#" class="UIButton grey ignore"><span class="UIButtonTxt">Ignore</span></a>
+				</td>
+			</tr>
+            <?php endforeach;} else { ?>
+            <tr class="tableEntry">
+				<td class="firstName"></td>
+				<td class="lastName"></td>
+				<td class="username"></td>
+				<td class="reason">No reports today. Weee!</td>
+				<td class="actions"></td>
+			</tr>
+            <?php } ?>
+		</tbody>
+	</table>
+</div>
+<a href="#" class="adminControl"><span>admin</span></a>
+<div id="dashboard" style="display:none">
+	<h3>GLaDOS</h3>
+	<p>Welcome to the Scapehouse Administration Console.</p>
+	<p>$</p>
+	<input type="text" id="mainIO" class="UITextInput" />
+</div>

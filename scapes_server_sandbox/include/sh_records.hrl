@@ -1,0 +1,8 @@
+-record(sh_apple_token, {token_id, session_id, user_id, token, badge_count}).
+-record(sh_scapes_access_token, {token_id, user_id, token, session_presence, pid}).
+-record(sh_scapes_listener, {follower_userid, pid}).
+-record(sh_scapes_participant, {userid}).
+-record(sh_user_online_status, {user_id, status, target_id, audience, timestamp}).
+-record(sh_user_mask, {mask_talking, mask_presence}).
+-record(sh_user, {user_id, name_first, name_last, user_handle, email_address, locale, gender, birthday, location_country, location_state, location_city, website, bio, timezone, join_date, total_messages_sent, total_messages_received, facebook_id, twitter_id, intagram_id, mask_talking, mask_presence}).
+-record(sh_scapes_thread_timestamp, {timestamp_delivered, timestamp_read}).

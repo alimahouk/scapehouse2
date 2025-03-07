@@ -1,0 +1,246 @@
+<style>
+    #mainWrapper {
+        min-height: 300px;
+        position: relative;
+        padding: 210px 0 50px;
+    }
+
+    .tipCard {
+        background: #e6e6e6 url('../../../graphics/en/bgs/paper_noise.png') repeat;
+        border: 1px solid #ccc;
+        font-size: 18px;
+        margin: 0 auto;
+        position: relative;
+        text-shadow: 0 1px 1px #fff;
+        -webkit-background-clip: padding-box;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        box-shadow: 0 0 8px #000;
+        -moz-box-shadow: 0 0 8px #000;
+        -webkit-box-shadow: 0 0 8px #000;
+        width: 560px;
+    }
+
+    .tipCard .wrapper {
+        border: 1px solid #fff;
+        padding: 20px 20px 74px;
+        position: relative;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+    }
+
+    .tipCard.tip {
+        z-index: 10;
+    }
+
+    .tipCard.tip .wrapper {
+        z-index: 11;
+    }
+
+    .tipCard.tip h2.name {
+        border-bottom: 1px solid #f9c1ca;
+        font: bold 32px 'agb', 'helvetica neue', helvetica, arial, sans-serif;
+        margin: 0;
+        padding: 0 0 20px;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .tipCard.tip .tipTxt {
+        min-height: 52px;
+        position: relative;
+    }
+
+    .tipCard.tip p, .tipCard.tip textarea {
+        font: 24px 'helvetica neue', helvetica, arial, sans-serif;
+        line-height: 32px;
+        margin: 20px 0 0;
+    }
+
+    .tipCard.tip textarea {
+        background: none;
+        border: 0;
+        display: block;
+        padding: 0;
+        resize: none;
+        width: 520px;
+    }
+
+    .tipCard.tip .topicStrip {
+        background: #cacac7 url('../../../graphics/en/icons/topics_icon_large.png') no-repeat 20px -3px;
+        bottom: 0;
+        font: 28px georgia, "times new roman", serif;
+        height: 32px;
+        left: 0;
+        padding: 12px 10px 12px 90px;
+        position: absolute;
+        text-shadow: 0 1px 1px #fff;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        -moz-border-radius-bottomright: 4px;
+        -moz-border-radius-bottomleft: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        -webkit-border-bottom-left-radius: 4px;
+        width: 458px;
+    }
+
+    .tipCard.tip .topicStrip .UITextInput {
+        background: none;
+        border: 0;
+        color: #333;
+        bottom: 10px;
+        display: block;
+        font: 24px georgia, "times new roman", serif;
+        height: 32px;
+        left: 90px;
+        padding: 0;
+        position: absolute;
+        text-shadow: 0 1px 1px #fff;
+        width: 400px;
+    }
+
+    .tipCard.tip .postFB {
+        background: url('../../../graphics/en/icons/share_facebook_off.png') no-repeat;
+        display: block;
+        height: 68px;
+        position: absolute;
+        right: 5px;
+        top: -5px;
+        width: 68px;
+    }
+
+    .tipCard.tip .postFB.activated {
+        background: url('../../../graphics/en/icons/share_facebook_on.png') no-repeat;
+    }
+
+    .tipCard.loginBox {
+        margin-top: -10px;
+        width: 374px;
+        z-index: 8;
+    }
+
+    .tipCard.loginBox .wrapper {
+        padding: 20px;
+        z-index: 9;
+    }
+
+    #credentialsForm .UILabel {
+        color: #919191;
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        text-shadow: 0 1px 1px #fff;
+    }
+
+    #credentialsForm .inputContainer {
+        margin: 5px 0;
+        -webkit-box-shadow: 0 1px 1px #fff;
+    }
+
+    #credentialsForm .UITextInput {
+        font-size: 12px;
+        padding: 5px;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        box-shadow: inset 0 0 3px #ccc;
+        -moz-box-shadow: inset 0 0 3px #ccc;
+        -webkit-box-shadow: inset 0 0 3px #ccc;
+        width: 320px;
+    }
+
+    #credentialsForm .UIPanel {
+        margin: 20px 0 0;
+        padding: 10px 0;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.postFB').click(function() {
+            $(this).toggleClass('activated');
+            return false;
+        });
+    });
+        
+    function postTip(){
+            
+        if (!window.ajaxProcessing) {
+           
+            var tip = $("#tip").val();
+            var topic = $("#topic").val();
+            var username = $("#username").val();
+            var pwd = $("#pwd").val();
+            var fbpost = ($('.postFB').hasClass('activated'))?1:0;
+			
+            if(tip == "" || topic == ""){
+               return false;
+            }
+            
+            popJelloon('affirmative', 'Please wait...');            
+            window.ajaxProcessing = true;
+        
+            $.ajax({
+                type:"POST",
+                url: "/test/fbtesttipper",
+                data: "tip=" + encodeURIComponent(tip) + "&topic=" + encodeURIComponent(topic) + "&username=" + encodeURIComponent(username) + "&pwd=" + encodeURIComponent(pwd) + "&fbpost=" + encodeURIComponent(fbpost),
+                success: function(responce) {
+                
+                    window.ajaxProcessing = false;
+                
+                    $(".jelloon").remove();
+                
+                    switch(responce) {
+                        case 'success':
+                            popJelloon('affirmative', 'Thanks for the tip!');
+                            $('#tip').val('');
+                            $('#topic').val('');
+                            break;
+                        case 'err':
+                            popJelloon('negative', 'Incorrect username or password');
+                            break;
+                    }  
+
+                }
+		
+            });	
+        }
+        
+    }
+        
+</script>
+<div class="tipCard tip">
+    <div class="wrapper">
+        <h2 class="name">
+            <span class="nameWrapper">Leave a tip</span>
+        </h2>
+        <div class="tipTxt">
+            <p><textarea placeholder="Type your tip here..." id="tip"></textarea></p>
+        </div>
+        <div class="topicStrip">
+            <span class="topicWrapper"><input type="text" id="topic" class="UITextInput topicContent" placeholder="Tell us what your tip's about here..." /></span>
+            <a href="#" class="postFB"></a>
+        </div>
+    </div>
+</div>
+<div class="tipCard loginBox">
+    <div class="wrapper" id="credentialsForm">
+        <form method="post">
+            <label for="username"><span class="UILabel">Username:</span>
+                <div class="inputContainer">
+                    <input type="text" id="username" id="username" name="username" class="UITextInput" />
+                </div>
+            </label>
+            <label for="passwd"><span class="UILabel">Password:</span>
+                <div class="inputContainer">
+                    <input type="password" id="pwd" name="passwd" class="UITextInput" />
+                </div>
+            </label>
+            <div class="UIPanel">
+                <label class="UIButton large green post">
+                    <input type="button" value="Post Tip" onclick="postTip();return false;" />
+                </label>
+            </div>
+        </form>
+    </div>
+</div>

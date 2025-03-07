@@ -1,0 +1,27 @@
+<span class="tableHeader">Total topics: <?= count($this->topics);?></span>
+
+<a href="/tipbox/tbadmincon/editqsg" style="margin:20px;">Edit Quick Start Guide</a>
+<table id="hor-minimalist-b" class="topicTable">
+    <tr>
+        <th>Topic&nbsp;id</th>
+        <th>User&nbsp;id</th>
+        <th>Topic</th>
+        <th>Genius&nbsp;Rank</th>
+        <th>Genius&nbsp;id</th>
+        <th>Tips</th>
+        <th>Follows</th>
+        <th>Time</th>
+    </tr>
+    <?php foreach($this->topics as $topic): ?>
+    <tr>
+        <td><?=$topic["id"];?></td>
+        <td><?= $topic["username"].":".$topic["userid"];?></td>
+        <td class="edit" userid="<?= $topic["userid"]; ?>" propertyName="content" itemid="<?= $topic["id"]; ?>" itemType="topic" ><?=$topic["content"];?></td>
+        <td><?=$topic["genius_rank"];?></td>
+        <td><?=$topic["genius"];?></td>
+        <td><?=$topic["tipCount"];?></td>
+        <td><?=$topic["followCount"];?></td>
+        <td><?= Model_Lib_Func::relativeTimeShort(strtotime($topic["time"]));?></td>
+    </tr>
+    <?php endforeach; ?>
+</table>

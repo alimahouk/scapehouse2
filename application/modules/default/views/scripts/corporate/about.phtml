@@ -1,0 +1,83 @@
+<script>
+	$(document).ready(function() {
+		$('.project .thumbnail').click(function() {
+			$('.project .thumbnail').removeClass('active');
+			$(this).addClass('active');
+			
+			var parent = $(this).parents('.project');
+			$('.mainPreview img', parent).attr('src', $('.active img', parent).attr('src'));
+			return false;
+		});
+	});
+</script>
+
+<div id="contentArea">
+	<h2 class="about">About Scapehouse</h2>
+    <p>noun | <em>Skāp ⋅ hous</em> |</p>
+    <p>It started out in 2011 as a hobby. We're doing this because we love building cool things that'll have an impact on people's lives.</p>
+	<!--<h2>Things we've made.</h2>
+	<div class="projects">
+		<div class="project sh2">
+			<a href="#" target="_blank" class="mainPreview"><img src="/graphics/en/imgs/slideshow/index.jpg" /></a>
+			<div class="thumbnails">
+				<a href="#" class="thumbnail index active">
+					<img src="/graphics/en/imgs/slideshow/index.jpg" />
+				</a>
+				<a href="#" class="thumbnail timeline">
+					<img src="/graphics/en/imgs/slideshow/timeline.jpg" />
+				</a>
+				<a href="#" class="thumbnail scapeTxt">
+					<img src="/graphics/en/imgs/slideshow/scape_text.jpg" />
+				</a>
+				<a href="#" class="thumbnail scapePhoto">
+					<img src="/graphics/en/imgs/slideshow/scape_photo.jpg" />
+				</a>
+				<a href="#" class="thumbnail profileInfo">
+					<img src="/graphics/en/imgs/slideshow/profile_info.jpg" />
+				</a>
+				<a href="#" class="thumbnail noteboard">
+					<img src="/graphics/en/imgs/slideshow/noteboard.jpg" />
+				</a>
+			</div>
+			<h4 class="projectTitle">Social Discussions</h4>
+			<h5>The best of Facebook &amp; Twitter, with a lil' Scapehouse touch.</h5>
+			<span class="description">This was our take on building an organised, social discussion platform. The project was awarded 1<sup>st</sup> place by the Faculty of Information Technology at UAE University.</span>
+			<strong><a href="#" target="_blank" class="gotoProject">&raquo;&nbsp;Check this one out!</a></strong>
+		</div>
+		<div class="project tb">
+			<a href="https://vimeo.com/47996308" target="_blank" class="mainPreview"><img src="/graphics/en/imgs/tb_icon.png" /></a>
+			<div class="thumbnails">
+				<a href="#" class="thumbnail icon active">
+					<img src="/graphics/en/imgs/tb_icon.png" />
+				</a>
+				<a href="#" class="thumbnail feed">
+					<img src="/graphics/en/imgs/shot_1_shadow.png" />
+				</a>
+				<a href="#" class="thumbnail tip">
+					<img src="/graphics/en/imgs/shot_2_shadow.png" />
+				</a>
+				<a href="#" class="thumbnail profile">
+					<img src="/graphics/en/imgs/shot_3_shadow.png" />
+				</a>
+				<a href="#" class="thumbnail topic">
+					<img src="/graphics/en/imgs/shot_4_shadow.png" />
+				</a>
+				<a href="#" class="thumbnail pub">
+					<img src="/graphics/en/imgs/shot_5_shadow.png" />
+				</a>
+				<a href="#" class="thumbnail qsg">
+					<img src="/graphics/en/imgs/shot_7.png" />
+				</a>
+				<a href="#" class="thumbnail login">
+					<img src="/graphics/en/imgs/shot_6.png" />
+				</a>
+			</div>
+			<h4 class="projectTitle">Tipbox</h4>
+			<h5>Tip sharing, reinvented.</h5>
+			<span class="description">Tipbox is a fun way of finding and sharing great tips while on the go. It's tip sharing, reinvented for your iPhone. <a href="https://vimeo.com/47996308" target="_blank">See it in action.</a></span>
+			<strong><a href="https://vimeo.com/47996308" target="_blank" class="gotoProject">&raquo;&nbsp;Check this one out!</a></strong>
+		</div>
+	</div>
+	<h3>What we do.</h3>
+	<p>We develop apps for the iOS &amp; OS X platforms, and that means apps that run on Macs, iPhones, iPads, &amp; iPod touches, using Apple's latest tools and technologies.</p>-->
+</div>

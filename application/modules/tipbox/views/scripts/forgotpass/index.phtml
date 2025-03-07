@@ -1,0 +1,36 @@
+<div class="UIContainer">
+    <div class="wrapper">
+        <?php if($_GET["errorLength"] == "true"):?>
+        <div class="errorStrip">
+            <h4>Your new password should be at least 6 characters long!</h4>
+        </div>
+        <?php endif;?>
+        <?php if($_GET["errorMatch"] == "true"):?>
+        <div class="errorStrip">
+            <h4>Whoa! Your passwords don't match!</h4>
+        </div>
+        <?php endif;?>
+        <div class="UIHeader">
+            <h2>Reset your password</h2>
+        </div>
+        <div id="passwdForm">
+            <form method="post" action="/tipbox/forgotpass?vc=<?=$_GET["vc"];?>">
+                <label for="field_newPasswd"><span class="UILabel">New password:</span>
+                    <div class="inputContainer">
+                        <input type="password" id="field_newPasswd" name="passwdMain" class="UITextInput" />
+                    </div>
+                </label>
+                <label for="field_confirmedPasswd"><span class="UILabel">Confirm password:</span>
+                    <div class="inputContainer">
+                        <input type="password" id="field_confirmedPasswd" name="confirmPasswdMain" class="UITextInput" />
+                    </div>
+                </label>
+                <div class="UIPanel">
+                    <label class="UIButton large green submit">
+                        <input type="submit" value="Submit" />
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

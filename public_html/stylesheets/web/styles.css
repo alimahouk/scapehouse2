@@ -1,0 +1,1313 @@
+html {height:100%;padding:0;}
+body {
+	background: #fff;
+	color: #333;
+	font: 13px 'Helvetica Neue', Helvetica, 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, sans-serif;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.UITextInput {
+	background-color: #fff;
+	border: 1px solid #bdc7d8;
+	height: 16px;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+
+.UICheckbox {
+    margin: 0;
+	vertical-align: bottom;
+}
+
+textarea {
+	background-color: #fff;
+	border: 1px solid #bdc7d8;
+	font: 11px 'Lucida Grande', Tahoma, Helvetica, Verdana, Arial, sans-serif;
+	outline: 0;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+
+select {
+	border: 1px solid #bdc7d8;
+	font-family: 'Lucida Grande', Tahoma, Helvetica, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	padding: 2px;
+}
+
+abbr {border:0;}
+
+a {color:#007aff;outline:none;text-decoration:none;}
+
+a:hover {color:#0073b9;text-decoration:underline;}
+
+.SHMention:hover {
+	text-decoration: none;
+}
+
+.SHMention:hover span {
+	text-decoration: underline;
+}
+
+.SHMention s {
+	opacity: .5;
+	text-decoration: none;
+}
+
+.UIButton {
+	background: url('../../../graphics/ui/uibutton.png') repeat;
+	border: 1px solid;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Lucida Grande', Tahoma, Helvetica, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 2px 6px;
+	text-decoration: none;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.0976562);
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.0976562);
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.0976562);
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	white-space: nowrap;
+}
+
+.UIButton.unavailable, .UIButton.unavailable:hover, .UIButton.unavailable:active {
+    background-color: #f2f2f2 !important;
+	background-image: none;
+	border-color: #c8c8c8 !important;
+	color: #fff;
+	cursor: default !important;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.UIButton.unavailable .UIButtonTxt, .UIButton.unavailable input {
+	color: #b8b8b8;
+	cursor: default !important;
+}
+
+.UIButtonTxt, .UIButton input {
+	background: none;
+	border: 0;
+	display: inline-block;
+	color: #fff;
+	cursor: pointer;
+	font-family: 'Lucida Grande', Tahoma, Helvetica, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+	outline: none;
+	padding: 1px 0 2px;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	white-space: nowrap;
+}
+
+.UIButton.large .UIButtonTxt, .UIButton.large input {
+	font-size: 13px;
+}
+
+.UIButton:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.UIButton:active {
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.046875);
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.046875);
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.046875);
+}
+
+.UIButton.blue {
+	background-color: #255acb;
+	background-position: 0 0;
+	border-color: #29447E #29447E #1A356E;
+}
+
+.UIButton.blue:active, .UIButton.blue.active {
+	background: #4f6aa3;
+	border-bottom-color: #29447E;
+}
+
+.UIButton.green {
+	background-color: #25cb25;
+	background-position: 0 -30px;
+	border-color: #5eb036 #5eb036 #2c5115;
+}
+
+.UIButton.green:active, .UIButton.green.active {
+	background: #609946;
+	border-color: #2c5115;
+	border-bottom-color: #3b6e22;
+}
+
+.UIButton.red {
+	background-color: #cb2525;
+	background-position: 0 -63px;
+	border-color: #932f2f #932f2f #511515;
+}
+
+.UIButton.red:active, .UIButton.red.active {
+	background: #9a4747;
+	border-color: #511515;
+	border-bottom-color: #6d2222;
+}
+
+.UIButton.grey {
+	background-color: #c7c7c7;
+	background-position: 0 -93px;
+	border-top: 1px solid #e0e0e0;
+	border-right: 1px solid #cfcfcf;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #cfcfcf;
+	color: #333;
+}
+
+.UIButton.grey .UIButtonTxt, .UIButton.grey input {
+	color: #333;
+}
+
+.UIButton.grey:active, .UIButton.grey.active {
+	background: #ddd;
+	border-color: #cfcfcf;
+	border-bottom-color: #999;
+}
+
+.UIButton .UIIcon {margin-right:5px;}
+.UIButton .spinner {vertical-align:bottom;}
+
+.hasTooltip .tooltip {
+	display: none;
+}
+
+.hasTooltip:hover .tooltip {
+	display: block;
+}
+
+.hasTooltip .tooltip:hover .tooltipTxt {
+	display: none !important;
+}
+
+.tooltip {
+	background: url('../../../graphics/ui/tooltip_bottom_arrow_black.png') no-repeat;
+	bottom: 100%;
+	display: block;
+	padding-bottom: 4px;
+	position: absolute;
+	z-index: 99;
+}
+
+.tooltip.left {
+	background-position: 0 100%;
+	left: 0;
+}
+
+.tooltip.right {
+	background-position: 100% 100%;
+	right: 0;
+}
+
+.tooltipTxt {
+	background: #000;
+	color: #fff;
+	display: block;
+	font-size: 11px;
+	font-weight: normal !important;
+	line-height: 14px;
+	padding: 4px 8px;
+	text-shadow: none !important;
+	-webkit-border-radius: 3px;
+	-webkit-box-shadow: 0 0 4px #000;
+	white-space: nowrap;
+}
+
+.jelloon {
+	border: 2px solid;
+	color: #fff;
+	cursor: pointer;
+	font-size: 18px;
+	left: 50%;
+	margin: -26px 0 0 -400px;
+	opacity: .9;
+	padding: 15px 0;
+	position: fixed;
+	text-align: center;
+	text-shadow: 0 1px 5px #000;
+	top: 50%;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	box-shadow: 0 0 8px #000;
+	-moz-box-shadow: 0 0 8px #000;
+	-webkit-box-shadow: 0 0 8px #000;
+	width: 800px;
+	z-index: 3;
+}
+
+.jelloon.affirmative {
+	background: #3c00ff;
+	border-color: #25009e;
+	border-top-color: #3400e0;
+}
+
+.jelloon.negative {
+	background: #db0004;
+	border-color: #9e0003;
+	border-top-color: #e00004;
+}
+
+.UIPanel {
+	text-align: center;
+}
+
+.timestamp, .timestamp a {
+	font-size: 11px;
+	color: #919191;
+}
+
+a img {border: none;}
+
+fieldset {border: none;padding: 0;}
+
+hr {background-color:#ccc;border:0;height:1px;}
+
+div.progressBar {
+	background: transparent url('../../../graphics/ui/progress_bar.png') no-repeat 0 0;
+	height: 36px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 164px;
+}
+
+.UISegmentControl {
+	display: block;
+	list-style: none;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.UISegmentControl a {
+	border-top: 1px solid #007aff;
+	border-left: 1px solid #007aff;
+	border-bottom: 1px solid #007aff;
+	float: left;
+	min-width: 70px;
+	padding: 5px;
+	text-align: center;
+	-webkit-transition: background 0.35s, color 0.35s;
+	transition: background 0.35s, color 0.35s;
+}
+
+.UISegmentControl li:last-child a {
+	border-right: 1px solid #007aff;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+}
+
+.UISegmentControl li:first-child a {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+}
+
+.UISegmentControl a.active {
+	background: #007aff;
+	color: #fff;
+}
+
+.UIProgressBar {display:block;margin-right:auto;margin-left:auto;}
+.UIWindow .UIProgressBar {left:50%;margin:-18px 0 0 -82px;position:absolute;top:50%;}
+a.unavailable, a.unavailable:hover {color:#ccc;cursor:default;text-decoration:none !important;}
+.hidden {display:none !important;}
+.paperweight {height:1px;overflow:hidden;visibility:hidden;}
+.placeholder {color:#919191;}
+
+.UINumberGiant {
+	font: bold 18px 'Helvetica Neue', helvetica, arial, sans-serif;
+}
+
+#noJS div, #unsupportedBrowser {
+	margin: 10px auto;
+	padding: 5px;
+	width: 450px;
+}
+
+#noJS h2, #unsupportedBrowser h2 {
+	display: block;
+	font: bold 12px 'Lucida Grande', Tahoma, Helvetica, Verdana, Arial, sans-serif;
+	margin: 0 0 5px 0;
+}
+
+#noJS {
+	margin-top: 43px;
+}
+
+#noJS div {
+	background-color: #ffa8aa;
+	border: 1px solid #e60004;
+}
+
+#unsupportedBrowser {
+	background-color: #fff;
+	border: 3px double #1700ad;
+	font-size: 12px;
+	position: absolute;
+	top: 15%;
+	z-index: 5;
+}
+
+#unsupportedBrowser h3 {
+	color: #c00;
+}
+
+#unsupportedBrowser .close {
+	background-color: #ff8587;
+	border: 2px solid #f00;
+	color: #fff;
+	float: right;
+	text-align: center;
+	-webkit-border-radius: 3px;
+	-webkit-transition: background-color 300ms ease-in-out;
+	width: 18px;
+}
+
+#unsupportedBrowser .close:hover {
+	background-color: #f00;
+	border: 2px solid #f00;
+	cursor: pointer;
+}
+
+#unsupportedBrowser .browsers {
+	margin-top: 5px;
+}
+
+#unsupportedBrowser img {
+	margin: 5px;
+}
+
+.clearfix {
+	display: block;
+	zoom: 1;
+}
+
+#pageSupport {
+	margin: 0 auto;
+	width: 981px;
+}
+
+.facemash .innerContainer a {
+	display: inline-block;
+	margin: 1px 1px 0 0;
+	position: relative;
+}
+
+.facemash .innerContainer a:hover {
+	text-decoration: none !important;
+}
+
+.facemash .innerContainer img {
+	height: 35px;
+	vertical-align: bottom;
+	width: 35px;
+}
+
+.facemash .paperweight {
+	width: 100%;
+}
+
+#header {
+	height: 330px;
+	padding-top: 1px;
+	position: relative;
+}
+
+#header .headerLinks {
+	color: #919191;
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+#SHLogo, #SHLogo:hover {
+	background: url('../../../graphics/ui/scapehouse.png') no-repeat;
+	display: block;
+	margin: 80px auto;
+	height: 112px;
+	width: 500px;
+}
+
+#footer {
+	clear: both;
+}
+
+#footer .copyright {
+	border-top: 1px dashed #f7f6e7;
+	color: #919191;
+	overflow: hidden;
+	padding: 20px 0;
+	position: relative;
+	text-align: center;
+	top: 30px;
+	width: 981px;
+}
+
+html.homepage .UISegmentControl {
+	margin-bottom: 60px;
+	width: 200px;
+}
+
+html.homepage .products {
+	margin: 10px auto;
+	text-align: center;
+	width: 710px;
+}
+
+html.homepage .icon {
+	color: #000;
+	display: inline-block;
+	height: 150px;
+	margin: 0 60px;
+	position: relative;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	width: 114px;
+}
+
+html.homepage .icon:hover {
+	color: #0073b9;
+	text-decoration: none;
+}
+
+html.homepage .icon .label {
+	display: block;
+	padding-top: 123px;
+	position: relative;
+	z-index: 2;
+}
+
+html.homepage .icon .illustration {
+	display: block;
+	height: 114px;
+	position: absolute;
+	top: 0;
+	width: 114px;
+}
+
+html.homepage .icon.scapes .illustration {
+	background: url('../../../graphics/ui/app_mobile_scapes.png') no-repeat;
+}
+
+html.homepage .icon.theboard .illustration {
+	background: url('../../../graphics/ui/app_mobile_nightboard.png') no-repeat;
+}
+
+html.homepage .icon.fingereader .illustration {
+	background: url('../../../graphics/ui/app_mobile_fingereader.png') no-repeat;
+}
+
+html.homepage .icon.metromate .illustration {
+	background: url('../../../graphics/ui/app_mobile_metromate.png') no-repeat;
+}
+
+html.homepage .icon.shelf, html.homepage .icon.shelf .illustration {
+	width: 123px;
+}
+
+html.homepage .icon.shelf .illustration {
+	background: url('../../../graphics/ui/app_desktop_shelf.png') no-repeat;
+}
+
+html.forgotPass #mainWrapper {
+	position: relative;
+	padding: 250px 0 60px;
+}
+
+html.forgotPass .UIContainer {
+	background: #e6e6e6 url('../../../graphics/ui/paper_noise.png') repeat;
+	border: 1px solid #ccc;
+	font-size: 18px;
+	margin: 0 auto;
+	text-shadow: 0 1px 1px #fff;
+	-webkit-background-clip: padding-box;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 0 8px #000;
+	-moz-box-shadow: 0 0 8px #000;
+	-webkit-box-shadow: 0 0 8px #000;
+	width: 560px;
+}
+
+html.forgotPass .wrapper {
+	border: 1px solid #fff;
+	padding: 20px;
+	position: relative;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+html.forgotPass .errorStrip {
+	background: #ffadad url('../../../graphics/ui/attention.png') no-repeat 10px 5px;
+	margin: -20px -20px 10px;
+	padding: 20px 20px 20px 80px;
+}
+
+html.forgotPass .errorStrip h4 {
+	font: normal 24px georgia;
+	margin: 0;
+}
+
+html.forgotPass .UIHeader {
+	border-bottom: 1px dashed #f9c1ca;
+	margin: 0 10px;
+	padding: 20px 20px 15px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.forgotPass .UIHeader h2 {
+	font: 24px "helvetica neue", helvetica, arial, sans-serif !important;
+	line-height: normal !important;
+	margin: 0 !important;
+	padding-top: 0 !important;
+}
+
+html.forgotPass #passwdForm {
+	margin: 0 auto;
+	padding: 20px 30px;
+	width: 330px;
+}
+
+html.forgotPass #passwdForm .UILabel {
+	color: #919191;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.forgotPass #passwdForm .inputContainer {
+	margin: 5px 0;
+	-webkit-box-shadow: 0 1px 1px #fff;
+}
+
+html.forgotPass #passwdForm .UITextInput {
+	font-size: 12px;
+	padding: 5px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: inset 0 0 3px #ccc;
+	-moz-box-shadow: inset 0 0 3px #ccc;
+	-webkit-box-shadow: inset 0 0 3px #ccc;
+	width: 320px;
+}
+
+html.forgotPass #passwdForm textarea {
+	display: block;
+	min-height: 60px;
+	overflow-y: auto;
+	resize: none;
+}
+
+html.forgotPass #passwdForm .UIPanel {
+	margin: 20px 0 0;
+	padding: 10px 0;
+}
+
+html.productPage #contentColumn {
+	margin-bottom: 70px;
+}
+
+html.productPage.fingereader body {
+	background-image: url('../../../graphics/ui/bg_fingereader.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+html.productPage.scapes #appIcon {
+	background: url('../../../graphics/ui/app_mobile_scapes.png') no-repeat;
+	float: left;
+	height: 114px;
+	margin: 25px 0 0 95px;
+	width: 114px;
+}
+
+html.productPage.fingereader #appIcon {
+	background: url('../../../graphics/ui/app_mobile_fingereader.png') no-repeat;
+	float: left;
+	height: 114px;
+	margin: 25px 0 0 95px;
+	width: 114px;
+}
+
+html.productPage.metromate #appIcon {
+	background: url('../../../graphics/ui/app_mobile_metromate.png') no-repeat;
+	float: left;
+	height: 114px;
+	margin: 25px 0 0 95px;
+	width: 114px;
+}
+
+html.productPage.shelf #appIcon {
+	background: url('../../../graphics/ui/app_desktop_shelf.png') no-repeat;
+	float: left;
+	height: 114px;
+	margin: 55px 0 0 60pxit;
+	width: 123px;
+}
+
+html.productPage #contentColumn h2 {
+	font: 40px "helvetica neue", helvetica, arial, sans-serif;
+	line-height: 48px;
+	margin: 55px 0 10px 280px;
+	padding-top: 30px;
+	text-shadow: 0 1px 1px #fff;
+	-webkit-font-smoothing: antialiased;
+}
+
+html.productPage #contentColumn h4.headline {
+	color: #474747;
+	font: 21px "helvetica neue", helvetica, arial, sans-serif;
+	line-height: 40px;
+	margin: 15px 0 10px 280px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.productPage.fingereader #contentColumn h2, html.productPage.fingereader #contentColumn h4.headline {
+	color: #fff;
+	text-shadow: none;
+}
+
+html.productPage.fingereader .mainImage {
+	background: url('../../../graphics/images/shot_fingereader_1.png') no-repeat;
+	height: 897px;
+	margin: 85px 0 0 240px;
+	width: 508px;
+}
+
+html.productPage.metromate .mainImage {
+	background: url('../../../graphics/images/shot_metromate_1.png') no-repeat;
+	height: 897px;
+	margin: 85px 0 0 240px;
+	width: 508px;
+}
+
+html.productPage.shelf .mainImage {
+	background: url('../../../graphics/images/shot_shelf_1.png') no-repeat;
+	height: 831px;
+	margin: 85px 0 10px -40px;
+	width: 1072px;
+}
+
+html.productPage.shelf .minSysRequirements, html.productPage.shelf .disclaimer {
+	color: #919191;
+	font-size: 11px;
+	text-align: center;
+}
+
+html.productPage.shelf .disclaimer {
+	display: block;
+	margin-top: 50px;
+}
+
+html.productPage .feature {
+	margin: 50px 0;
+}
+
+html.productPage .feature h3 {
+	color: #474747;
+	font: 22px "helvetica neue", helvetica, arial, sans-serif;
+	margin: 10px 0;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.productPage .feature p {
+	color: #777;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+html.productPage .feature.left h3, html.productPage .feature.left p {
+	margin-left: 278px;
+}
+
+html.productPage .feature.right h3, html.productPage .feature.right p {
+	margin-right: 278px;
+}
+
+html.productPage.scapes .feature.miniFeed {
+	background: url('../../../graphics/images/scapes_feed.png') no-repeat 590px 0;
+	padding: 160px 100px 160px 0;
+}
+
+html.productPage.scapes .feature.adhoc {
+	background: url('../../../graphics/images/scapes_adhoc.png') no-repeat 0 0;
+	padding: 90px 0 90px 230px;
+}
+
+html.productPage.scapes .feature.usernames {
+	background: url('../../../graphics/images/scapes_usernames.png') no-repeat 680px 0;
+	padding: 40px 0;
+}
+
+html.productPage.scapes .feature.devices {
+	background: url('../../../graphics/images/scapes_devices.png') no-repeat 10px 0;
+	padding: 40px 0;
+}
+
+html.productPage.scapes .feature.privacy {
+	background: url('../../../graphics/images/scapes_privacy.png') no-repeat 680px 0;
+	padding: 70px 50px 50px 0;
+}
+
+html.productPage.scapes .feature.passcode {
+	background: url('../../../graphics/images/scapes_passcode.png') no-repeat -10px 0;
+	padding: 65px 0;
+}
+
+html.productPage.metromate .feature.timings {
+	background: url('../../../graphics/images/metromate_timings.png') no-repeat 750px -5px;
+	padding: 10px 0 20px;
+}
+
+html.productPage.metromate .feature.stations {
+	background: url('../../../graphics/images/metromate_stations.png') no-repeat 0px -10px;
+	padding: 10px 0 20px;
+}
+
+html.productPage.metromate .feature.lastTrain {
+	background: url('../../../graphics/images/metromate_last_train.png') no-repeat 650px 55px;
+	padding: 95px 0;
+}
+
+html.productPage.metromate .feature.nol {
+	background: url('../../../graphics/images/metromate_nol.png') no-repeat 0px 35px;
+	padding: 50px 0;
+}
+
+html.productPage.metromate .feature.design {
+	background: url('../../../graphics/images/metromate_design.png') no-repeat 700px 10px;
+	padding: 10px 0;
+}
+
+html.productPage.metromate .feature.offline {
+	background: url('../../../graphics/images/metromate_offline.png') no-repeat 20px 0px;
+	padding: 35px 0;
+}
+
+html.productPage.shelf .feature.documents {
+	background: url('../../../graphics/images/shelf_documents.png') no-repeat 50px 10px;
+	padding: 10px 0 20px;
+}
+
+html.productPage.shelf .feature.directories {
+	background: url('../../../graphics/images/shelf_dirs.png') no-repeat 710px 10px;
+	padding: 10px 0 20px;
+}
+
+html.productPage.shelf .feature.thumbnails {
+	background: url('../../../graphics/images/shelf_thumbs.png') no-repeat 0px 0;
+	padding: 95px 0;
+}
+
+html.productPage.shelf .feature.retina {
+	background: url('../../../graphics/images/shelf_retina.png') no-repeat 690px -40px;
+	padding: 95px 0;
+}
+
+html.productPage .storeButton {
+	color: #fff;
+	display: block;
+	font-size: 12px;
+	height: 60px;
+	margin: 10px auto 20px;
+	padding: 24px 0 0 75px;
+	position: relative;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #000;
+	width: 145px;
+	z-index: 1;
+}
+
+html.productPage .storeButton:active {
+	color: #b4b4b4;
+	text-shadow: 0 -1px 1px #000;
+}
+
+html.productPage .storeButton.ios {
+	background: url('../../../graphics/ui/app_store_button.png') no-repeat 0 -1px;
+}
+
+html.productPage .storeButton.ios:active {
+	background: url('../../../graphics/ui/app_store_button.png') no-repeat 0 -84px;
+	color: #b4b4b4;
+	text-shadow: 0 -1px 1px #000;
+}
+
+html.productPage .storeButton.osx {
+	background: url('../../../graphics/ui/mac_app_store_button.png') no-repeat 0 -1px;
+}
+
+html.productPage .storeButton.osx:active {
+	background: url('../../../graphics/ui/mac_app_store_button.png') no-repeat 0 -84px;
+	color: #b4b4b4;
+	text-shadow: 0 -1px 1px #000;
+}
+
+html.productPage .storeButton span {
+	display: block;
+	font-size: 23px;
+}
+
+html.productPage .viralButtons {
+	margin: 55px 0 0;
+	text-align: center;
+}
+
+html.productPage.scapes .dotIndicators
+{
+	margin-top: 10px;
+	overflow: hidden;
+	text-align: center;
+}
+
+html.productPage.scapes .dotIndicators a {
+	background: url('../../../graphics/ui/dot_indicator.png') no-repeat;
+	display: inline-block;
+	height: 16px;
+	margin: 5px;
+	width: 16px;
+}
+
+html.productPage.scapes .dotIndicators .active {
+	background: url('../../../graphics/ui/dot_indicator_active.png') no-repeat;
+}
+
+html.utilPage #mainWrapper {
+	min-height: 300px;
+	position: relative;
+	padding-bottom: 50px;
+}
+
+html.utilPage .tip {
+	background: #e6e6e6 url('../../../graphics/ui/paper_noise.png') repeat;
+	border: 1px solid #ccc;
+	font-size: 18px;
+	margin: 50px auto 0;
+	text-shadow: 0 1px 1px #fff;
+	-webkit-background-clip: padding-box;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 0 8px #000;
+	-moz-box-shadow: 0 0 8px #000;
+	-webkit-box-shadow: 0 0 8px #000;
+	width: 560px;
+}
+
+html.utilPage .tip .wrapper {
+	border: 1px solid #fff;
+	padding: 20px 20px 74px;
+	position: relative;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+html.utilPage .tip h2.name {
+	font: bold 32px 'helvetica neue', helvetica, arial, sans-serif;
+	margin: 0 0 10px 90px;
+	-webkit-font-smoothing: antialiased;
+}
+
+html.utilPage .tip h3.username {
+	border-bottom: 1px solid #f9c1ca;
+	color: #9d9d9d;
+	font: 30px 'helvetica neue', helvetica, arial, sans-serif;
+	margin: 0;
+	padding: 0 0 20px 90px;
+}
+
+html.utilPage .tip h2.name a {
+	color: #333;
+}
+
+html.utilPage .tip h3.username a {
+	color: #9d9d9d;
+}
+
+html.utilPage .tip h2.name a:hover, html.utilPage .tip h3.username a:hover {
+	color: #0073b9;
+	text-decoration: none;
+}
+
+html.applicationError h2 {
+	background-color: #e8e8e8;
+	border: 1px solid #ccc;
+	margin: 100px auto 50px;
+	padding: 10px;
+	text-shadow: 0 1px 1px #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0px 0px 5px #ccc;
+	-moz-box-shadow: 0px 0px 5px #ccc;
+	-webkit-box-shadow: 0px 0px 5px #ccc;
+	width: 505px;
+}
+
+html.applicationError h2 span {
+	display: block;
+	font-size: 12px;
+	font-weight: normal;
+	margin-top: 5px;
+}
+
+html.corporate #contentColumn {
+	margin-bottom: 70px;
+}
+
+html.corporate #contentColumn h2 {
+	font: 40px "helvetica neue", helvetica, arial, sans-serif;
+	line-height: 48px;
+	padding-top: 30px;
+	-webkit-font-smoothing: antialiased;
+}
+
+html.corporate #contentColumn h2, html.corporate #contentColumn p {
+	margin: 10px 0;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.corporate #contentColumn h3 {
+	border-bottom: 1px dashed #e6e6e6;
+	clear: both;
+	color: #474747;
+	font: 18px "helvetica neue", helvetica, arial, sans-serif;
+	line-height: 48px;
+	margin: 10px 0;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.corporate #contentColumn p, html.corporate #contentColumn ul, html.corporate #contentColumn ol {
+	color: #777;
+	font-size: 15px;
+	line-height: 20px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.corporate #contentColumn .decorationPhoto {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	max-width: 200px;
+	padding: 5px;
+	box-shadow: 0px 0px 5px #ccc;
+	-moz-box-shadow: 0px 0px 5px #ccc;
+	-webkit-box-shadow: 0px 0px 5px #ccc;
+}
+
+html.corporate #contentColumn .decorationPhoto.left {
+	float: left;
+	margin: 5px 10px 10px 5px;
+}
+
+html.corporate #contentColumn ul {
+	list-style-type: square;
+}
+
+html.corporate #contentColumn ul li {
+	color: #00ad00;
+}
+
+html.corporate #contentColumn li h4 {
+	color: #333;
+	margin: 20px 0 0;
+}
+
+html.corporate .divider {
+	background: url('../../../graphics/ui/divider.png') no-repeat;
+	height: 137px;
+	width: 980px;
+}
+
+html.corporate .footnote {
+	border-top: 1px dashed #ccc;
+	display: block;
+	font-size: 12px;
+	padding-top: 6px;
+}
+
+html.portfolio .leading h2 {
+	font: normal 40px 'helvetica neue', helvetica, arial, sans-serif;
+	line-height: normal;
+	text-align: center;
+}
+
+html.portfolio .leading h3 {
+	font: normal 24px 'helvetica neue', helvetica, arial, sans-serif;
+	color: #777;
+	text-align: center;
+}
+
+html.portfolio .leading p, html.portfolio .other p, html.portfolio .contact p
+{
+	font-size: 15px;
+	line-height: 20px;
+}
+
+html.portfolio .portfolio h3, html.portfolio .contact h3
+{
+	border-top: 1px solid #ccc;
+	border-bottom: 1px dashed #ccc;
+	font: normal 24px 'helvetica neue', helvetica, arial, sans-serif;
+	padding: 10px 0;
+	text-align: center;
+}
+
+html.portfolio .work, html.portfolio .other, html.portfolio .thumbnails
+{
+	overflow: hidden;
+}
+
+html.portfolio .work {
+	float: left;
+	height: 700px;
+	margin-right: 5px;
+	overflow: hidden;
+	width: 470px;
+}
+
+html.portfolio .other
+{
+	clear: both;
+}
+
+html.portfolio .work h4 {
+	font: normal 24px 'helvetica neue', helvetica, arial, sans-serif;
+	line-height: normal;
+	margin-bottom: 0;
+}
+
+html.portfolio .work p {
+	color: #777;
+	font-size: 15px;
+	line-height: 20px;
+	margin-right: 10px;
+}
+
+html.portfolio .thumbnails div
+{
+	background-position-y: center;
+	background-repeat: no-repeat;
+	border: 1px solid #ededed;
+	float: left;
+}
+
+html.portfolio .thumbnails.single div
+{
+	background-size: 470px auto;
+	height: 470px;
+	width: 470px;
+}
+
+html.portfolio .thumbnails.double div
+{
+	background-size: 230px auto;
+	height: 470px;
+	margin-right: 2px;
+	width: 230px;
+}
+
+html.portfolio .thumbnails.quad div
+{
+	background-size: 230px auto;
+	height: 230px;
+	margin: 0 2px 2px 0;
+	width: 230px;
+}
+
+html.portfolio .other img
+{
+	float: left;
+	height: 245px;
+	width: 245px;
+}
+
+html.portfolio .contact
+{
+	text-align: center;
+}
+
+html.portfolio .contact .social
+{
+	display: inline-block;
+	height: 32px;
+	margin: 5px 5px 20px;
+	width: 32px
+}
+
+html.portfolio .contact .social.fb
+{
+	background: url('../../../graphics/ui/social_facebook.png') no-repeat;
+}
+
+html.portfolio .contact .social.twitter
+{
+	background: url('../../../graphics/ui/social_twitter.png') no-repeat;
+}
+
+html.portfolio .contact .social.instagram
+{
+	background: url('../../../graphics/ui/social_instagram.png') no-repeat;
+}
+
+html.contact #contentArea 
+{
+	margin: 70px 100px 85px;
+	position: relative;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.contact .envelope 
+{
+	background: url('../../../graphics/ui/classic_envelope_pattern.png') no-repeat;
+	height: 483px;
+	margin: -20px 0 0 75px;
+	position: absolute;
+	width: 840px;
+}
+
+html.contact .UIHeader 
+{
+	border-bottom: 1px dashed #f9c1ca;
+	margin: 0 10px;
+	padding: 20px 200px 10px 210px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.contact .UIHeader h2
+{
+	font: 24px "helvetica neue", helvetica, arial, sans-serif !important;
+	line-height: normal !important;
+	margin: 0 !important;
+	padding-top: 0 !important;
+}
+
+html.contact .UIHeader p {
+	margin: 5px 0 0;
+}
+
+html.contact #contactForm {
+	margin: 0 auto;
+	padding: 20px 30px;
+	width: 330px;
+}
+
+html.contact #contactForm .UILabel {
+	color: #919191;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.contact #contactForm .inputContainer {
+	margin: 5px 0;
+	-webkit-box-shadow: 0 1px 1px #fff;
+}
+
+html.contact #contactForm .UITextInput, html.contact #contactForm textarea {
+	font-size: 12px;
+	padding: 5px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: inset 0 0 3px #ccc;
+	-moz-box-shadow: inset 0 0 3px #ccc;
+	-webkit-box-shadow: inset 0 0 3px #ccc;
+	width: 320px;
+}
+
+html.contact #contactForm textarea {
+	display: block;
+	min-height: 60px;
+	overflow-y: auto;
+	resize: none;
+}
+
+html.contact #contactForm .UIPanel {
+	margin: 20px 0 0;
+	padding: 10px 0;
+}
+
+.recipientInfo {
+	bottom: 20px;
+	position: absolute;
+	right: 20px;
+}
+
+.recipientInfo p {
+	font: 11px 'Droid Serif', serif !important;
+	line-height: 11px !important;
+	margin: 5px 0 !important;
+}
+
+html.contact .divider {
+	position: absolute;
+}
+
+html.contact .divider.upper {
+	top: 385px;
+}
+
+html.contact .divider.lower {
+	top: 850px;
+}
+
+html.contact h3.thanks {
+	border: 0 !important;
+	color: #777;
+	font: 32px "helvetica neue", helvetica, arial, sans-serif !important;
+	left: 50%;
+	margin: 0 0 0 -150px !important;
+	padding: 0 !important;
+	position: absolute;
+	text-align: center;
+	text-shadow: 0 1px 1px #fff;
+	top: 430px;
+	width: 300px;
+}
+
+html.contact .thanks.main {
+	border: 0 !important;
+	color: #333 !important;
+	font-size: 40px !important;
+	margin-left: -150px !important;
+	top: 580px;
+}
+
+html.contact .theLove {
+	background: url('../../../graphics/ui/heart_faded_16px.png') no-repeat 0 0;
+	height: 16px;
+	left: 50%;
+	margin-left: -8px;
+	position: absolute;
+	top: 800px;
+	width: 17px;
+}

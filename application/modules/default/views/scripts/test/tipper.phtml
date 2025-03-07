@@ -1,0 +1,81 @@
+<script src="/scripts/lib/jquery.js" type="text/javascript"></script>
+<script>
+    
+function postCall(){
+    
+    $('#status').html("").append("Processing....");
+
+    var tip = $('#tip').val();
+    var username = $('#username').val();
+    var topic = $('#topic').val();
+    var cat = $('#cat').val();
+    var fbPost = ($("#fbPost:checked").length === 1)?1:0;
+    
+    
+    $.ajax({
+        type:"POST",
+        url: "/test/tipper",
+        data: "username="+encodeURIComponent(username)+"&content="+encodeURIComponent(tip)+"&topicContent="+encodeURIComponent(topic)+"&catid="+encodeURIComponent(cat)+"&fbPost="+encodeURIComponent(fbPost),
+        error: function(e){
+            alert(e);
+        },
+        success: function(responce) {
+	
+          
+          $('#status').html("").append("Tip Posted!" + ".... RESPONCE -> "+responce);
+			
+        }
+    });
+    
+}
+</script>
+<h1> The Tipper </h1>
+Username:<input type="text" id="username"/>
+Tip:<textarea rows="5" cols="20" id="tip"></textarea>
+Topic:<input type="text" id="topic"/>
+Category:<select id="cat">
+    <?php
+    $tbcatTable = new Tipbox_Model_DbTable_Tbcat();
+    $cats = $tbcatTable->getCats("thing");
+    $cats = array_merge($cats, $tbcatTable->getCats("place"));
+    $cats = array_merge($cats, $tbcatTable->getCats("idea"));
+
+    foreach ($cats as $cat):
+        ?>    
+
+        <option value="<?= $cat["id"]; ?>"><?= $cat["parentcat"]; ?> : <?= $cat["subcat"]; ?></option>
+
+<?php endforeach; ?>
+
+</select>
+<input type="checkbox" value="fbPost" id="fbPost"/>
+<input type="button" value="submit" onclick="postCall()" />
+<hr/>
+<h3>Status:</h3><h4 id="status">Idle...</h4>
+<hr/>
+<?php 
+
+$tbTipTable = new Tipbox_Model_DbTable_Tbtip();
+$tips = $tbTipTable->getAll();
+
+?>
+<h3> Tips: <?= count($tips);?></h3>
+
+<table border="2">
+    <tr>
+        <th>Tip ID</th>
+        <th>Username/Userid</th>
+        <th>Tip</th>
+        <th>Topic</th>
+        <th>Cat</th>
+    </tr>
+    <?php foreach($tips as $tip): ?>
+    <tr>
+        <td><?=$tip["id"];?></td>
+        <td><?=$tip["username"] . ":" . $tip["userid"];?></td>
+        <td><?=$tip["content"];?></td>
+        <td><?=$tip["topicContent"];?></td>
+        <td><?=$tip["parentcat"] . ":" . $tip["subcat"];?></td>
+    </tr>
+    <?php endforeach; ?>
+</table>

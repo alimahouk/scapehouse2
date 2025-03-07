@@ -1,0 +1,78 @@
+<div id="userDetails">
+
+    <?php if (!$this->user["pichash"]): ?>
+        <img class="profilePic" src="/graphics/en/admin/picPlaceholder.png" height="180"/>
+    <?php else: ?>
+        <img class="profilePic" src="/userphotos/<?= $this->user["id"]; ?>/profile/m_<?= $this->user["pichash"]; ?>.jpg" height="180"/>
+    <?php endif; ?>
+
+    <table id="hor-minimalist-b" class="userTable">
+        <th><div style="min-width: 350px; width: 350px;">Detail Name</div></th>
+        <th><div style="min-width: 350px; width: 350px;">Value</div></th>
+    
+        <tr>
+            <td>Userid</td>
+            <td><?= $this->user["id"]; ?></td>
+        </tr>
+        
+
+        <tr>
+            <td>Fullname</td>
+            <td class="edit" propertyName="fullname" itemid="<?= $this->user["id"]; ?>" itemType="user"><?= $this->user["fullname"]; ?></td>
+        </tr>   
+        
+        <tr>
+            <td>Email</td>
+            <td class="edit" propertyName="email" itemid="<?= $this->user["id"]; ?>" itemType="user"><?= $this->user["email"]; ?></td>
+        </tr>
+
+        <tr>
+            <td>Username</td>
+            <td class="edit" propertyName="username" itemid="<?= $this->user["id"]; ?>" itemType="user"><?= $this->user["username"]; ?></td>
+        </tr>
+        <tr>
+            <td>Bio</td>
+            <td class="edit"  propertyName="bio" itemid="<?= $this->user["id"]; ?>" itemType="user"><?= $this->user["bio"]; ?></td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td class="edit"  propertyName="location" itemid="<?= $this->user["id"]; ?>" itemType="user"><?= $this->user["location"]; ?></td>
+        </tr>
+        <tr>
+            <td>Website</td>
+            <td class="edit"  propertyName="website" itemid="<?= $this->user["id"]; ?>" itemType="user"><?= $this->user["website"]; ?></td>
+        </tr>
+        <tr>
+            <td>FB</td>
+            <td class="edit"  propertyName="FB" itemid="<?= $this->user["id"]; ?>" itemType="user"><?= $this->user["fbConnected"]; ?></td>
+        </tr>
+        <tr>
+            <td>Signup date</td>
+            <td><?= Model_Lib_Func::relativeTime(strtotime($this->user["time"])); ?></td>
+        </tr>
+    </table>
+
+    <div style="clear:both;"></div>
+    <hr />
+    <span class="tableHeader">Total tips: <?= count($this->tips); ?></span>
+
+    <table id="hor-minimalist-b" class="tipTable">
+        <tr>
+            <th>Tip&nbsp;id</th>
+            <th>Tip</th>
+            <th>Topic</th>
+            <th>Cat</th>
+            <th>Time</th>
+        </tr>
+        <?php foreach ($this->tips as $tip): ?>
+            <tr>
+                <td><?=$tip["id"];?></td>
+                <td><a href="/tipbox/tbadmincon/edituser?username=<?=$tip["username"];?>" target="_blank"><?=$tip["username"] . ":" . $tip["userid"];?></a></td>
+        <td class="edit" userid="<?=$tip["userid"];?>" propertyName="tip" itemid="<?= $tip["id"]; ?>" itemType="tip"><?= htmlentities($tip["content"]);?></td>
+        <td class="edit" userid="<?=$tip["userid"];?>" propertyName="topic" itemid="<?= $tip["id"]; ?>" itemType="tip"><?= htmlentities($tip["topicContent"]);?></td>
+                <td><?=$tip["parentcat"] . ":" . $tip["subcat"];?></td>
+                <td><?= Model_Lib_Func::relativeTimeShort(strtotime($tip["time"]));?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+</div>

@@ -1,0 +1,3244 @@
+* {
+	-webkit-text-size-adjust: none;
+}
+
+body, tr, input, textarea {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+html.touch, .touch tr, .touch input, .touch textarea {
+	font-family: Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+body {
+	background-color: #fff;
+	color: #333;
+	margin: 0px;
+	padding: 0px;
+}
+
+a {color:#0073b9;text-decoration:none;}
+a:active {text-decoration:underline;}
+
+.SHMention:hover {
+	text-decoration: none;
+}
+
+.SHMention:hover span {
+	text-decoration: underline;
+}
+
+.SHMention s {
+	opacity: .5;
+	text-decoration: none;
+}
+
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+textarea, .UITextInput {
+	background-color: #fff;
+	border: 1px solid #bdc7d8;
+	padding: 3px;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+
+.UITextInput {
+	height: 22px;
+	padding: 4px 7px 5px;
+}
+
+.UIButton {
+	background: url('../../../graphics/en/sprites/UIButton.png') repeat;
+	border: 1px solid;
+	color: #fff;
+	display: inline-block;
+	font-family: 'Lucida Grande', Tahoma, Helvetica, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 4px 9px;
+	text-decoration: none;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.0976562);
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.0976562);
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.0976562);
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	white-space: nowrap;
+}
+
+.UIButton.unavailable, .UIButton.unavailable:active {
+    background-color: #f2f2f2 !important;
+	background-image: none;
+	border-color: #c8c8c8 !important;
+	color: #fff;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.UIButton.unavailable .UIButtonTxt, .UIButton.unavailable input {
+	color: #b8b8b8;
+	cursor: default !important;
+}
+
+.UIButtonTxt, .UIButton input {
+	background: none;
+	border: none;
+	display: inline-block;
+	color: inherit;
+	cursor: pointer;
+	font-family: 'Lucida Grande', Tahoma, Helvetica, Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0 -14px;
+	-webkit-appearance: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	white-space: nowrap;
+}
+
+.UIButtonTxt {
+	padding: 0 10px;
+}
+
+.UIButton.large .UIButtonTxt, .UIButton.large input {
+	font-size: 13px;
+}
+
+.UIButton:active {
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.046875);
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.046875);
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.046875);
+}
+
+.UIButton.blue {
+	background-color: #255acb;
+	background-position: 0 0;
+	border-color: #29447E #29447E #1A356E;
+}
+
+.UIButton.blue:active, .UIButton.blue.active {
+	background: #4f6aa3;
+	border-bottom-color: #29447E;
+}
+
+.UIButton.green {
+	background-color: #25cb25;
+	background-position: 0 -30px;
+	border-color: #5eb036 #5eb036 #2c5115;
+}
+
+.UIButton.green:active, .UIButton.green.active {
+	background: #609946;
+	border-color: #2c5115;
+	border-bottom-color: #3b6e22;
+}
+
+.UIButton.red {
+	background-color: #cb2525;
+	background-position: 0 -63px;
+	border-color: #932f2f #932f2f #511515;
+}
+
+.UIButton.red:active, .UIButton.red.active {
+	background: #9a4747;
+	border-color: #511515;
+	border-bottom-color: #6d2222;
+}
+
+.UIButton.grey {
+	background-color: #c7c7c7;
+	background-position: 0 -93px;
+	border-top: 1px solid #e0e0e0;
+	border-right: 1px solid #cfcfcf;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #cfcfcf;
+	color: #333;
+}
+
+.UIButton.grey:active, .UIButton.grey.active {
+	background: #ddd;
+	border-color: #cfcfcf;
+	border-bottom-color: #999;
+}
+
+.UIButton .UIIcon {margin-right:5px;}
+.UIButton .spinner {vertical-align:bottom;}
+.hidden {display:none !important;}
+hr {background-color:#ccc;border:0;height:1px;}
+.UINumberGiant {font: bold 18px 'Helvetica Neue', helvetica, arial, sans-serif;}
+
+.dropDownMenuCandidate {
+	background: url('../../../graphics/en/sprites/UIButton.png') repeat 0 -93px;
+	border-top: 1px solid #e0e0e0;
+	border-right: 1px solid #cfcfcf;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #cfcfcf;
+	color: #333;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 18px;
+	padding: 2px 20px 2px 6px;
+	position: relative;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	z-index: 2;
+}
+
+.dropDownMenuCandidate .dropArrow {
+	background: url('../../../graphics/en/UI/navi_arrow_down_black.png') no-repeat 0 0;
+	height: 16px;
+	position: absolute;
+	right: 5px;
+	top: 3px;
+	width: 16px;
+}
+
+.dropDownMenuCandidate .UIIcon {
+	margin-right: 5px;
+}
+
+.dropDownMenuCandidate:active {
+	background: #ddd;
+	border-color: #999;
+}
+
+.dropDownMenuCandidate.active {
+	background: #ddd;
+	border-color: #999;
+	border-bottom-color: #ddd;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.296875);
+}
+
+.UINotifBadge {
+	position: absolute;
+}
+
+.UINotifBadge .badgeOuterWrapper {
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    height: 21px;
+    padding-right: 11px;
+	text-align: center;
+	text-decoration: none !important;
+	text-shadow: none !important;
+}
+
+.UINotifBadge .badgeInnerWrapper {
+    display: block;
+	height: 21px;
+    padding: 1px 0 3px 10px;
+	text-decoration: none !important;
+}
+
+.UINotifBadgeRed .badgeOuterWrapper {
+	background: url('../../../graphics/en/UI/notif_badge_red_inner.png') no-repeat scroll top right;
+	color: #fff;
+}
+
+.UINotifBadgeRed .badgeInnerWrapper {
+	background: url('../../../graphics/en/UI/notif_badge_red_outer.png') no-repeat;
+}
+
+.UINotifBadgeYellow .badgeOuterWrapper {
+	background: url('../../../graphics/en/UI/notif_badge_yellow_inner.png') no-repeat scroll top right;
+	color: #333;
+}
+
+.UINotifBadgeYellow .badgeInnerWrapper {
+	background: url('../../../graphics/en/UI/notif_badge_yellow_outer.png') no-repeat;
+}
+
+.UISplitBadge .splitBadge {
+	background: url('../../../graphics/en/UI/graphics/notif_badge_yellow_inner.png') no-repeat scroll top right;
+	display: inline-block;
+	color: #333;
+	height: 21px;
+	margin: -4px -11px 0 0;
+	padding-right: 11px;
+}
+
+.UINotifBadge .splitBadgeInnerWrapper {
+    background: url('../../../graphics/en/UI/notif_badge_yellow_outer.png') no-repeat;
+    display: inline-block;
+	height: 21px;
+    padding: 4px 0 3px 10px;
+}
+
+.UIMenu {
+	background-color: #fff;
+	border: 1px solid #999;
+	font-size: 12px;
+	margin-top: -1px;
+	position: absolute;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.296875);
+}
+
+.UIMenuHeader {
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	padding: 6px 10px 6px;
+}
+
+.UIMenuHeader h3 {
+	float: left;
+	font-size: 14px;
+	line-height: 21px;
+	margin: 0;
+}
+
+.UIMenu hr {
+	margin: 3px 2px;
+}
+	
+.UIMenu ul {
+	margin: 0;
+	padding: 0;
+}
+
+.UIMenuItem {
+	list-style: none;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+
+.UIMenuItem a {
+	color: #333;
+	display: block;
+	padding: 4px 6px;
+}
+
+.jelloon {
+	border: 2px solid;
+	color: #fff;
+	font-size: 18px;
+	left: 50%;
+	margin: -26px 0 0 -45%;
+	opacity: .9;
+	padding: 15px 0;
+	position: fixed;
+	text-align: center;
+	text-shadow: 0 1px 5px #000;
+	top: 50%;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	box-shadow: 0 0 8px #000;
+	-moz-box-shadow: 0 0 8px #000;
+	-webkit-box-shadow: 0 0 8px #000;
+	width: 90%;
+	z-index: 99;
+}
+
+.jelloon.affirmative {
+	background: #3c00ff;
+	border-color: #25009e;
+	border-top-color: #3400e0;
+}
+
+.jelloon.negative {
+	background: #db0004;
+	border-color: #9e0003;
+	border-top-color: #e00004;
+}
+
+.facemash .innerContainer a {
+	display: inline-block;
+	margin: 1px 1px 0;
+	position: relative;
+}
+
+.facemash .innerContainer img {
+	display: block;
+	height: 35px;
+	vertical-align: bottom;
+	width: 35px;
+}
+
+.facemash .paperweight {
+	width: 100%;
+}
+
+.commentBox {
+	background-color: #e3f1fa;
+	border: 1px solid #c6e4f2;
+	padding: 5px;
+	position: relative;
+}
+
+.commentBox .userThmbnlSmall {
+	float: left;
+	height: 35px;
+	margin: 0 5px 0 0;
+	width: 35px;
+}
+
+.commentBox textarea {
+	display: block;
+	height: 24px;
+	margin: 0;
+	overflow: hidden;
+	padding: 5px;
+	resize: none;
+}
+
+.commentBox .UIButton.post {
+	bottom: 5px;
+	line-height: normal;
+	position: absolute;
+	right: 5px;
+}
+
+.deleteConfirmation {
+	background-color: #ffffe5;
+	border: 1px solid #f5e082;
+	padding: 5px;
+}
+
+.deleteConfirmation .UIButton {
+	line-height: normal;
+	margin-top: 5px;
+}
+
+.UIPanel {
+	text-align: center;
+}
+
+.loadMoreBtn {
+	background-color: #e3f1fa;
+	border: 1px solid #c6e4f2;
+	display: block;
+	font-size: 13px;
+	margin: 20px 10px 10px;
+	overflow: hidden;
+	padding: 10px 5px;
+	text-align: center;
+}
+
+.timestamp, .timestamp a {
+	color: #919191;
+}
+
+#header {
+	background-color: #0073b9;
+	border-top: 1px solid #198ecf;
+	border-bottom: 1px solid #198ecf;
+	display: -webkit-box;
+	height: 44px;
+	position: relative;
+	-webkit-box-orient: horizontal;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.496094) 0 1px 2px;
+	width: 100%;
+	z-index: 15;
+}
+
+#header .barItem {
+	background-color: #0c84cd;
+	height: 44px;
+	position: absolute;
+	width: 35px;
+}
+
+#header .barItem.active {
+	background-color: #fff !important;
+	border-top: 1px solid #999 !important;
+	border-right: 1px solid #999 !important;
+	border-bottom: 1px solid #fff !important;
+	border-left: 1px solid #999 !important;
+	-webkit-box-shadow: 0px 4px 5px -5px rgba(0, 0, 0, 0.296875);
+	z-index: 17;
+}
+
+#header .UINotifBadge {
+	left: 20px;
+	top: 1px;
+}
+
+#notifsLink {
+	background: #0c84cd url('../../../graphics/en/icons/flag_white_16px.png') no-repeat 10px 16px;
+	border-right: 1px solid #198ecf;
+	left: 0;
+}
+
+#newPostLink {
+	background: #0c84cd url('../../../graphics/en/icons/pencil_white_16px.png') no-repeat 10px 16px;
+	border-left: 1px solid #198ecf;
+	right: 0;
+}
+
+#newPostLink.otherStyle {
+	background: #0c84cd url('../../../graphics/en/icons/cross_white.png') no-repeat 10px 16px;
+}
+
+.mainNavi {
+	background-color: #0073b9;
+	position: relative;
+	width: 100%;
+	z-index: 10;
+}
+
+.mainNavi td {
+	width: 25%;
+}
+
+.landscape .mainNavi td {
+	width: 16.666%;
+}
+
+.mainNavi .naviItem {
+	background-color: #0073b9;
+	border-bottom: 1px solid #198ecf;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	height: 26px;
+	padding: 10px 10px 0;
+	text-align: center;
+	text-shadow: 0 -1px 1px #000;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.496094) 0 1px 2px;
+	white-space: nowrap;
+}
+
+.mainNavi .naviItem.active {
+	background-color: #0c84cd;	
+}
+
+.mainNavi .dropDownMenu {
+	background: #0073b9 url('../../../graphics/en/UI/menu-arrow-downward.png') no-repeat 80%;
+}
+
+.mainNavi .dropDownMenu.active {
+	background-color: #fff !important;
+	border-right: 1px solid #999 !important;
+	border-bottom: 1px solid #fff !important;
+	border-left: 1px solid #999 !important;
+	color: #333;
+	text-shadow: none;
+	-webkit-box-shadow: 0px 4px 5px -5px rgba(0, 0, 0, 0.296875);
+	z-index: 17;
+}
+
+#moreMenu {
+	right: 0;
+	top: 83px;
+	width: 50%;
+	z-index: 6;
+}
+
+#moreMenu h2 {
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #ccc;
+	color: #919191;
+	font-size: 13px;
+	margin: 0;
+	padding: 10px 5px;
+}
+
+#moreMenu h2 a {
+	display: block;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#moreMenu h2 .currentUserUsername {
+	color: #090;
+	font-weight: normal;
+}
+
+#footer {
+	border-top: 1px solid #ccc;
+	padding: 5px 2px 5px 7px;
+}
+
+#footer .footerLinks {
+	float: right;
+}
+
+#footer .footerLinks a {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+#footer .copyright {
+	color: #919191;
+}
+
+#SHLogo {
+	display: inline-block;
+	left: 50%;
+	margin-left: -82px;
+	position: absolute;
+}
+
+#SHLogo img {
+	margin-top: 2px;
+}
+
+html.public .barItem, html.public .mainNavi, html.profile .mainNavi.global {
+	display: none;
+}
+
+#notifsDropMenu {
+	background-color: #fff;
+	border: 1px solid #999;
+	border-bottom-width: 2px;
+	left: 0;
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	top: 46px;
+	-webkit-box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.296875);
+	width: 99.4%;
+	z-index: 11;
+}
+
+#notifsDropMenu .UIMenuHeader {
+	background-color: #f2f2f2;
+}
+
+#notifsDropMenu .UIMenuHeader h3 {
+	color: #919191;
+	text-transform: uppercase;
+}
+
+#notifsDropMenu .UIMenuHeader .action {
+	float: right;
+}
+
+#notifsDropMenu .notif.new .linkWrapper {
+	background-color: #edebff;
+}
+
+#notifsDropMenu .linkWrapper {
+	border-bottom: 1px solid #e6e6e6;
+	display: block;
+	overflow: hidden;
+	padding: 0;
+}
+
+#notifsDropMenu .void, #notifsDropMenu .loadingIndicator {
+	padding: 10px;
+	text-align: center;
+}
+
+#notifsDropMenu .userThmbnlSmall {
+	float: left;
+	height: 62px;
+	width: 62px;
+}
+
+#notifsDropMenu .notifBody {
+	line-height: 16px;
+	padding: 5px 5px 3px 67px;
+}
+
+#notifsDropMenu .notifTxt {
+	color: #333;
+}
+
+#notifsDropMenu .notif .userName {
+	color: #0073b9;
+	font-size: 13px;
+}
+
+#notifsDropMenu .notif strong {
+	font-style: italic;
+}
+
+#notifsDropMenu .notifBody .preview {
+	color: #919191;
+	display: block;
+	font-style: italic;
+	margin: 3px 0;
+}
+
+#notifsDropMenu .timestamp {
+	color: #919191;
+	display: block;
+	font-size: 11px;
+	margin-top: 3px;
+}
+
+#notifsDropMenu .timestamp .UIIcon {
+	margin: -5px 5px 0 0;
+}
+
+#notifsDropMenu .seeAllNotifs a {
+	background-color: #f2f2f2;
+	border-top: 1px solid #ccc;
+	display: block;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+	text-shadow: 0 -1px 1px #fff;
+	box-shadow: 0 0 4px #ccc;
+	-moz-box-shadow: 0 0 4px #ccc;
+	-webkit-box-shadow: 0 0 4px #ccc;
+}
+
+#joinSHBox {
+	background-color: #dee5ef;
+	border: 1px solid #ccc;
+	left: 50%;
+	margin-left: -146px;
+	padding: 15px;
+	position: fixed;
+	top: 150px;
+	-webkit-background-clip: padding-box;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 15px #000;
+	-moz-box-shadow: 0 0 15px #000;
+	-webkit-box-shadow: 0 0 15px #000;
+	width: 270px;
+	z-index: 99;
+}
+
+#joinSHBox .UIHeader {
+	border-bottom: 1px dashed #ccc;
+	margin-bottom: 5px;
+	overflow: hidden;
+	padding: 0 0 5px;
+}
+
+#joinSHBox .UIHeader .action {
+	float: right;
+}
+
+#joinSHBox .UIPanel {
+	padding: 5px 0 0;
+}
+
+#mainLoginForm {
+	margin-bottom: 40px;
+}
+
+#mainLoginForm .UIHeader {
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+	margin: 0 0 20px;
+	overflow: hidden;
+	padding: 10px 14px;
+	box-shadow: 0 0 4px #ccc;
+	-moz-box-shadow: 0 0 4px #ccc;
+	-webkit-box-shadow: 0 0 4px #ccc;
+}
+
+#mainLoginForm .UIHeader h2 {
+	color: #919191;
+	float: left;
+	font-size: 14px;
+	margin: 0;
+	text-shadow: 0 1px 1px #fff;
+	text-transform: uppercase;
+}
+
+#mainLoginForm .UIHeader .action {
+	float: right;
+}
+
+#loginError {
+	background-color: #ffa8aa;
+	border-top: 1px solid #e60004;
+	border-bottom: 1px solid #e60004;
+	margin: -20px 0 10px;
+	padding: 5px;
+	text-align: center;
+	box-shadow: 0 0 4px #777;
+	-moz-box-shadow: 0 0 4px #777;
+	-webkit-box-shadow: 0 0 4px #777;
+}
+
+#mainLoginForm .UITextInput {
+	margin: 5px 10px;
+	width: 70%;
+}
+
+#mainLoginForm .forgotPasswd {
+	display: inline-block;
+	margin: 5px 10px;
+}
+
+#pagelet_notifs {
+	border-top: 1px solid #ccc;
+	background-color: #f2f2f2;
+	margin-top: -1px;
+}
+
+#pagelet_notifs .responders div {
+	border-bottom: 1px dashed #e6e6e6;
+	margin: 8px 5px;
+	padding: 5px 0;
+	position: relative;
+}
+
+#pagelet_notifs .responders a {
+	display: block;
+	line-height: 16px;
+	padding-left: 20px;
+}
+
+#pagelet_notifs .requests a {
+	background: url('../../../graphics/en/icons/friend_add.png') no-repeat 0 0;
+}
+
+#pagelet_publisher {
+	position: relative;
+}
+
+#publisher {
+	margin: 10px 0 20px 10px;
+}
+
+#publisher .UIAttachmentOptions {
+	border-top: 0;
+	border-right: 1px solid #b3b3b3;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	width: 522px;
+}
+
+#publisher #lowerPanel {
+	height: 38px;
+	position: relative;
+	width: 96%;
+}
+
+#publisher .attachmentsPanel {
+	float: left;
+	margin-top: 7px;
+}
+
+#publisher .attachmentsPanel a {
+	display: inline-block;
+	line-height: 16px;
+	margin-right: 5px;
+}
+
+#publisher #editor {
+	background-color: #fff;
+	border: 1px solid #cacaca;
+	border-right-color: #b3b3b3;
+	display: block;
+	margin: 0;
+	height: 40px;
+	padding: 5px;
+	width: 92%;
+}
+
+#pagelet_publisher #publisher .UIPanel {
+	background-color: #f7f7f7;
+	border: 1px solid #ccc;
+	border-right-color: #b3b3b3;
+	border-bottom: 0;
+	height: 90px;
+	position: relative;
+	text-align: left;
+	box-shadow: inset 0 0 4px #999;
+	-moz-box-shadow: inset 0 0 4px #999;
+	-webkit-box-shadow: inset 0 0 4px #999;
+	width: 95.2%;
+}
+
+#pagelet_publisher #publisher .UIPanel .cancelBtn {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+}
+
+#pagelet_publisher .UIPanel.heading .charCounter {
+	font: bold 16px georgia, 'times new roman', times, serif;
+	color: #00ad00;
+	position: absolute;
+	left: 65px;
+	top: 5px;
+}
+
+#pagelet_publisher .UIPanel.heading .UILabel {
+	color: #919191;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 31px 5px 0 10px;
+	vertical-align: top;
+}
+
+#pagelet_publisher .UIPanel.heading textarea {
+	border: 1px solid #bdc7d8 !important;
+	font-size: 13px;
+	height: 34px;
+	margin-top: 29px;
+	padding: 5px;
+	width: 200px;
+}
+
+#pagelet_publisher .postPrivacyOptionsMenu {
+	position: absolute;
+	right: 60px;
+	top: 7px;
+	z-index: 5;
+}
+
+#pagelet_publisher .postPrivacyOptionsMenu .wrapper {
+	position: relative;
+	z-index: 0;
+}
+
+#pagelet_publisher .postPrivacyOptionsMenu .dropDownMenuCandidate {
+	line-height: 16px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+#pagelet_publisher .dropDownMenuCandidate .UIIcon {
+	margin-top: 1px;
+	vertical-align: top;
+}
+
+#pagelet_publisher .postPrivacyOptionsMenu .UIMenu {
+	right: 0;
+	width: 180px;
+}
+
+#pagelet_publisher .postPrivacyOptionsMenu .UIMenu a {
+	padding-left: 26px;
+}
+
+#pagelet_publisher .postPrivacyOptionsMenu .UIMenu .activeChoice {
+	background-image: url('../../../graphics/en/icons/tick_green_16px.png');
+	background-repeat: no-repeat;
+	background-position: 5px 4px;
+	font-weight: bold;
+}
+
+#pagelet_publisher .postPrivacyOptionsMenu .UIMenu .extern {
+	display: block;
+	position: relative;
+	padding: 5px 5px 5px 26px;
+}
+
+#pagelet_publisher .postPrivacyOptionsMenu .UIMenu .extern input {
+	left: 5px;
+	position: absolute;
+}
+
+#publisher .UIButton.post {line-height:16px;position:absolute;right:0;top:7px;}
+
+#timeline {
+	min-height: 150px;
+	padding-top: 5px;
+}
+
+#timeline .noPosts {
+	background-color: #f7f7f7;
+	border-top: 1px dashed #e6e6e6;
+	font-size: 12px;
+	margin: 0 5px 10px;
+    padding: 10px;
+}
+
+#timeline h3.dateMarker {
+	color: #919191;
+	font-size: 11px;
+	margin: 10px 0 10px 20px;
+	text-transform: uppercase;
+}
+
+#timeline .SHActivityBlock {
+	margin: 0 0 20px;
+	overflow: hidden;
+}
+
+#timeline .SHActivityBlock .blockHeader {
+	float: left;
+}
+
+#timeline .SHActivityBlock .dateMarker {
+	background: url('../../../graphics/en/bgs/bookmark_ribbon.png') no-repeat 0 0;
+	color: #fff;
+	line-height: 16px;
+	margin: 0;
+	padding: 5px 5px 5px 0;
+	text-align: right;
+	text-shadow: 0 -1px 1px #000;
+	width: 85px;
+}
+
+#timeline .SHActivityWrapper {
+	border-left: 1px solid #e6e6e6;
+	margin-left: 90px;
+	overflow: hidden;
+}
+
+#timeline .SHActivityBlock .SHActivity {
+	border-top: 1px dashed #e6e6e6;
+	line-height: 16px;
+	padding: 5px 0;
+	overflow: hidden;
+}
+
+#timeline .SHActivityBlock .SHActivity:first-child {
+	border: 0;
+}
+
+#timeline .SHActivityBlock .SHActivity .UIIcon {
+	float: left;
+	margin: 0 5px 0 7px;
+}
+
+#timeline .SHActivityBlock .storyPreviewBlock {
+	color: #919191;
+	margin-left: 28px;
+}
+
+#timeline .identification {
+	float: left;
+}
+
+#timeline .identification .userThmbnlSmall img {
+	height: 50px;
+	margin: 0 0 3px;
+	width: 50px;
+}
+
+#timeline .entrySubject {
+	display: inline-block;
+	font-weight: bold;
+	margin-right: 2px;
+}
+
+#timeline .entryBody {
+	background-color: #eeeeec;
+	border: 1px solid #fff;
+	font-size: 13px;
+	margin: 20px;
+	overflow: hidden;
+	padding: 10px;
+	position: relative;
+	word-wrap: break-word;
+	box-shadow: 0 0 3px #777;
+	-moz-box-shadow: 0 0 3px #777;
+	-webkit-box-shadow: 0 0 3px #777;
+	z-index: 1;
+}
+
+#timeline .bodyBlock {
+	margin: 0 0 0 70px;
+	position: relative;
+	z-index: 2;
+}
+
+#timeline .frameStruct {
+	background: url('../../../graphics/en/UI/card_layout.png') no-repeat 0 0;
+	height: 69px;
+	margin: -10px 0 0 -8px;
+	position: absolute;
+	width: 365px;
+	z-index: 0;
+}
+
+#timeline h2.postTitle {
+	font-family: georgia, 'times new roman', times, serif;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 22px;
+	margin: 0 0 15px;
+}
+
+#timeline h2.postTitle a {
+	color: #222;
+	display: block;
+}
+
+#timeline .entryBody h3.userName {
+	font-size: 13px;
+	margin: 0 0 3px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+#timeline .entryBody .userName a {
+	color: #333;
+	text-decoration: none;
+}
+
+#timeline .entryBody .userName a:hover .name {
+	text-decoration: underline;
+}
+
+#timeline .entryBody .separator {
+	color: #333;
+}
+
+#timeline .entryBody .username {
+	color: #090;
+	display: inline-block;
+	font-weight: normal;
+}
+
+#timeline .scapeBodyTxt {
+	line-height: 21px;
+}
+
+#timeline .timelineStory {
+	color: #999;
+}
+
+#timeline .entryBody .storyFacemash {
+	margin: 10px 0 5px;
+}
+
+#timeline .timelineEntry.photo .thmbnlImg {
+	display: block;
+	margin-bottom: 20px;
+}
+
+#timeline .timelineEntry.photo .CGImage {
+	display: block;
+}
+
+#timeline .timelineEntry.photo .entryBody, #timeline .timelineEntry.profilePic .entryBody {
+	background: #fff;
+}
+
+#timeline .timelineEntry.profilePic div.photo {
+	margin: 0 0 20px;
+	overflow: hidden;
+}
+
+#timeline .timelineEntry.profilePic .photo img {
+	float: left;
+}
+
+#timeline .timelineEntry.profilePic .photoCaptionTxt {
+	line-height: 20px;
+	max-width: 300px;
+}
+
+#timeline .timelineEntry.profilePic .leftQuote, #timeline .timelineEntry.profilePic .rightQuote {
+	color: #ccc;
+	display: inline-block;
+	font-family: arial, sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	height: 13px;
+	vertical-align: bottom;
+}
+
+#timeline .timelineEntry.profilePic .leftQuote {
+	margin-right: 5px;
+}
+
+#timeline .timelineEntry.profilePic .rightQuote {
+	margin-left: 5px;
+}
+
+#timeline .timelineEntry.profilePic .uploadLocation {
+	color: #919191;
+	display: block;
+	font-size: 11px;
+	margin-top: 5px;
+}
+
+#timeline .timelineEntry.profilePic .uploadLocation .UIIcon {
+	vertical-align: bottom;
+}
+
+#timeline .timelineEntry.share .originalPost {
+	background-color: #fff;
+	margin: -9px -9px 10px;
+	padding: 9px 9px 10px;
+	position: relative;
+}
+
+#timeline .timelineEntry.share .originalPost .postData {
+	right: 9px;
+	top: 9px;
+}
+
+#timeline .timelineEntry.share .originalPost .userThmbnlSmall img {
+	float: left;
+	height: 35px;
+	width: 35px;
+}
+
+#timeline .timelineEntry.share .originalPostBody {
+	font-size: 11px;
+	margin-left: 45px;
+}
+
+#timeline .timelineEntry.share .originalPostBody h2 {
+	font-size: 12px;
+	margin: 0 0 5px;
+}
+
+#timeline .timelineEntry.share .originalPostTxt {
+	color: #777;
+}
+
+#timeline .timelineEntry.share .originalPostSubject {
+	color: #919191;
+	font-weight: bold;
+}
+
+#timeline .timelineEntry.share .originalPostPhoto {
+	padding: 10px 0;
+}
+
+#timeline .timelineEntry.share .CGImage {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-top-color: #eee;
+	border-right-color: #ddd;
+	border-bottom-color: #bbb;
+	max-width: 170px;
+	max-height: 150px;
+	padding: 4px;
+	box-shadow: 0 1px 3px #999;
+	-moz-box-shadow: 0 1px 3px #999;
+	-webkit-box-shadow: 0 1px 3px #999;
+}
+
+#timeline .timelineEntry.share .thmbnl:hover .CGImage {
+	border-color: #999;
+}
+
+#timeline .timelineEntry.share .originalPostStatsWrapper {
+	overflow: hidden;
+}
+
+#timeline .timelineEntry.share .originalPostStats {
+	float: left;
+	line-height: 16px;
+	margin: 3px 0 0;
+	overflow: hidden;
+	padding: 3px 0 3px 5px;
+}
+
+#timeline .timelineEntry.share .originalPostStats:hover {
+	background-color: #e3f1fa;
+	text-decoration: none;
+}
+
+#timeline .timelineEntry.share .originalPostStats .UIIcon {
+	margin-right: 5px;
+}
+
+#timeline .timelineEntry.share .originalPostStats div {
+	float: left;
+	margin-right: 5px;
+}
+
+#timeline .timelineEntry.share .forwardCount {
+	color: #00ad00;
+	margin-top: 3px;
+}
+
+#timeline .timelineEntry.share .attachment.unavailable {
+	border-top: 1px dashed #e6e6e6;
+	font-size: 11px;
+	margin: 5px 0 5px;
+	padding: 10px;
+	text-shadow: 0 1px 1px #fff;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+#timeline .timelineEntry.share .attachment.unavailable h3 {
+	font-size: 11px;
+	margin: 0 0 5px;
+}
+
+#timeline .timelineEntry.share .attachment.unavailable ul {
+	list-style-type: square;
+	margin: 0;
+	padding-left: 20px;
+}
+
+#timeline .timelineEntry .attachment {
+	border-top: 1px dashed #e9e9e9;
+	margin-top: 5px;
+	overflow: hidden;
+	padding-top: 5px;
+	position: relative;
+	z-index: 1;
+}
+
+#timeline .timelineEntry .attachment .graphicalPreview {
+	border: 1px solid #000;
+	float: left;
+	margin: 0 0 3px 3px;
+	position: relative;
+	box-shadow: 0 0 3px #000;
+	-moz-box-shadow: 0 0 3px #000;
+	-webkit-box-shadow: 0 0 3px #000;
+}
+
+#timeline .timelineEntry .attachment .videoThumbnl {
+	display: block;
+	width: 200px;
+}
+
+#timeline .timelineEntry .attachment .playerIcon {
+	background: url('../../../graphics/en/UI/play_video_32px.png') no-repeat 0 0;
+	height: 32px;
+	left: 50%;
+	margin-left: -16px;
+	position: absolute;
+	top: 59px;
+	width: 32px;
+	z-index: 2;
+}
+
+#timeline .timestamp .UIIcon {
+	margin: 0 5px 1px 0;
+}
+
+#timeline .timestamp .UIIcon.pending {
+	margin: 0;
+}
+
+#timeline .timestamp {
+	color: #808080;
+	display: inline-block;
+	font-size: 11px;
+	line-height: 16px;
+	margin-top: 5px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+#timeline .entryBody .timestamp {
+	font-weight: bold;
+}
+
+#timeline .timestamp a {
+	text-decoration: none;
+	color: #808080;
+}
+
+#timeline .disclosure {
+	margin-top: 2px;
+	position: absolute;
+	right: 0;
+}
+
+#timeline .disclosure .btn {
+	background: #053497 url('../../../graphics/en/UI/navi_arrow_right_white.png') no-repeat 1px 1px;
+	border: 1px solid #074de4;
+	display: inline-block;
+	height: 16px;
+	-webkit-background-clip: padding-box;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	box-shadow: 0 0 8px #777;
+	-moz-box-shadow: 0 0 8px #777;
+	-webkit-box-shadow: 0 0 8px #777;
+	width: 18px;
+}
+
+#timeline .scapeActions {
+	left: auto;
+	margin-top: -33px;
+	right: 20px;
+	text-align: center;
+	width: 250px;
+}
+
+#timeline .scapeActions .UIButton {
+	margin-right: 5px;
+}
+
+#timeline .scapeActions .UIPopupWindowContents {
+	padding: 5px 0 5px 5px;
+}
+
+#timeline .postStats {
+	background-color: #e3f1fa;
+	border: 1px solid #c6e4f2;
+	display: inline-block;
+	font-size: 11px;
+	line-height: 15px;
+	padding: 3px;
+}
+
+#timeline .postStats .UIIcon {
+	margin: -2px 3px 0 0;
+}
+
+#timeline .replies, #timeline .likes, #timeline .dislikes {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+.repliesBubbleArrow {
+	background: url('../../../graphics/en/sprites/bubble_arrows.png') no-repeat -20px -38px;
+	height: 10px;
+	position: relative;
+	width: 20px;
+	z-index: 2;
+}
+
+#timeline .repliesBubbleArrow {
+	margin: 0 0 -1px 7px;
+}
+
+#timeline .bubbleArrowUp {
+	background: url('../../../graphics/en/sprites/bubble_arrows.png') no-repeat -20px 0;
+	float: left;
+	height: 18px;
+	width: 33px;
+}
+
+#timeline .commentBox {
+	width: 431px;
+}
+
+.commentBox .userThmbnlSmall {
+	float: left;
+	height: 35px;
+	margin: 0 5px 0 0;
+	width: 35px;
+}
+
+#timeline .commentBox textarea {
+	height: 24px;
+	padding: 5px;
+	resize: none;
+	width: 324px;
+}
+
+#timeline .timelineEntry.activity .commentBox textarea {
+	width: 320px;
+}
+
+#timeline .deleteConfirmation {
+	margin-bottom: 5px;
+	padding: 7px;
+	position: relative;
+	z-index: 3;
+}
+
+#timeline .loadMoreBtn {
+	margin: 0 5px 10px;
+	width: auto;
+}
+
+html.discussion .CGPost {
+	margin: 0 0 30px;
+	padding-top: 10px;
+	position: relative;
+}
+
+html.discussion .CGPost .identification {
+	float: left;
+	margin-left: 5px;
+}
+
+html.discussion .CGPost .identification img {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 0 3px #ccc;
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
+}
+
+html.discussion .CGPost .postSubject {
+	display: inline-block;
+	font-weight: bold;
+	margin-right: 2px;
+}
+
+html.discussion h2#postTitle {
+	font-family: georgia, 'times new roman', times, serif;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0 0 5px;
+}
+
+html.discussion .CGPost .postBody {
+	margin: 0 5px 0 50px;
+	min-height: 30px;
+	word-wrap: break-word;
+}
+
+html.discussion .CGPost .attachment.photo {
+	border-top: 0;
+	margin: -10px 0 5px;
+	padding-top: 0;
+	width: 100%;
+}
+
+html.discussion .CGPost .attachment.photo .CGImage {
+	display: block;
+	width: 100%;
+}
+
+html.discussion .CGPost .originalPost {
+	margin: 0 0 10px;
+	padding-top: 10px;
+}
+
+html.discussion .CGPost .originalPost .userThmbnlSmall img {
+	float: left;
+	height: 30px;
+	width: 30px;
+}
+
+html.discussion .CGPost .originalPostBody {
+	font-size: 11px;
+	margin-left: 60px;
+}
+
+html.discussion .CGPost .originalPostBody h2 {
+	font-size: 13px;
+	margin: 0 0 5px;
+}
+
+html.discussion .CGPost .originalPostTxt {
+	color: #777;
+}
+
+html.discussion .CGPost .originalPostSubject {
+	color: #919191;
+	font-weight: bold;
+}
+
+html.discussion .CGPost .originalPostPhoto {
+	padding: 10px 0;
+}
+
+html.discussion .CGPost .originalPostPhoto .CGImage {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-top-color: #eee;
+	border-right-color: #ddd;
+	border-bottom-color: #bbb;
+	max-width: 162px;
+	max-height: 191px;
+	padding: 4px;
+	box-shadow: 0 1px 3px #999;
+	-moz-box-shadow: 0 1px 3px #999;
+	-webkit-box-shadow: 0 1px 3px #999;
+}
+
+html.discussion .CGPost .originalPostStatsWrapper {
+	overflow: hidden;
+}
+
+html.discussion .CGPost .originalPostStats {
+	float: left;
+	line-height: 16px;
+	margin: 3px 0 0;
+	overflow: hidden;
+	padding: 3px 0 3px 5px;
+}
+
+html.discussion .CGPost .originalPostStats .UIIcon {
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+html.discussion .CGPost .originalPostStats div {
+	float: left;
+	margin-right: 5px;
+}
+
+html.discussion .CGPost .forwardCount {
+	color: #00ad00;
+	margin-top: 3px;
+}
+
+html.discussion .CGPost .attachment.unavailable {
+	background-color: #f2f2f2;
+	border: 1px solid #ccc;
+	font-size: 11px;
+	margin-bottom: 5px;
+	padding: 10px;
+	text-shadow: 0 1px 1px #fff;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+html.discussion .CGPost .attachment.unavailable h3 {
+	font-size: 11px;
+	margin: 0 0 5px;
+}
+
+html.discussion .CGPost .attachment.unavailable ul {
+	list-style-type: square;
+	margin: 0;
+	padding-left: 20px;
+}
+
+html.discussion .CGPost .disclosure {
+	margin-top: 2px;
+	position: absolute;
+	right: 10px;
+}
+
+html.discussion .CGPost .disclosure .btn {
+	background: #053497 url('../../../graphics/en/UI/navi_arrow_right_white.png') no-repeat 1px 1px;
+	border: 1px solid #074de4;
+	display: inline-block;
+	height: 16px;
+	-webkit-background-clip: padding-box;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	box-shadow: 0 0 8px #777;
+	-moz-box-shadow: 0 0 8px #777;
+	-webkit-box-shadow: 0 0 8px #777;
+	width: 18px;
+}
+
+html.discussion .CGPost .scapeActions {
+	left: auto;
+	margin-top: -33px;
+	right: 20px;
+	text-align: center;
+	width: 250px;
+}
+
+html.discussion .CGPost .scapeActions .UIButton {
+	margin-right: 5px;
+}
+
+html.discussion .CGPost .scapeActions .UIPopupWindowContents {
+	padding: 5px 0 5px 5px;
+}
+
+html.discussion .CGPost .timestamp, #discussionWall .timestamp {
+	font-size: 12px;
+}
+
+html.discussion .CGPost .timestamp {
+	display: inline-block;
+	margin: 3px 0 0;
+}
+
+html.discussion .CGPost .timestamp .UIIcon {
+	margin: 0 3px 2px 0;
+}
+
+html.discussion .userOpinions .UIIcon, #discussionWall .userOpinions .UIIcon {
+	margin-right: 5px;
+}
+
+html.discussion .CGPost .userOpinions {
+	font-size: 12px;
+	line-height: 14px;
+	margin: 5px 0 0;
+}
+
+html.discussion .CGPost .likes, html.discussion .CGPost .dislikes {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+html.discussion .CGPost .repliesBubbleArrow {
+	margin: 3px 0 -1px 65px;
+}
+
+html.discussionEnabled .loadPrevReplies {
+	background-color: #e3f1fa;
+	border: 1px solid #c6e4f2;
+	color: #222;
+	display: block;
+	font-size: 12px;
+	margin: 0 10px 0 50px;
+	padding: 5px;
+	position: relative;
+	text-shadow: #fff 0 1px 1px;
+}
+
+html.discussionEnabled .loadPrevReplies .UIIcon {
+	margin-right: 2px;
+}
+
+html.discussionEnabled .loadPrevReplies .replyCounter {
+	color: #919191;
+	float: right;
+	margin-top: 1px;
+}
+
+#discussionWall .CGReply .userThmbnlSmall {
+	float: left;
+	margin-left: 5px;
+}
+
+#discussionWall .CGOtherReply .userThmbnlSmall {
+	margin-left: 55px;
+}
+
+#discussionWall .CGReply .userThmbnlSmall img {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 0 3px #ccc;
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
+}
+
+.CGReply .replyHeader .userName a {
+	font-weight: bold;
+	text-shadow: 0 1px 1px #fff;
+}
+
+#discussionWall .CGReply {
+	margin-top: 15px;
+}
+
+.CGReply .replyBubbleArrow {
+	float: left;
+	height: 18px;
+	margin-top: 10px;
+	width: 20px;
+}
+
+.CGAuthorReply .replyBubbleArrow {
+	background: url('../../../graphics/en/sprites/bubble_arrows.png') no-repeat 0 0;
+}
+
+.CGOtherReply .replyBubbleArrow {
+	background: url('../../../graphics/en/sprites/bubble_arrows.png') no-repeat 0 -20px;
+}
+
+.CGReply .replyBubble {
+	font-size: 12px;
+	-webkit-background-clip: padding-box;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 4px #ccc;
+	-moz-box-shadow: 0 0 4px #ccc;
+	-webkit-box-shadow: 0 0 4px #ccc;
+}
+
+.CGOtherReply .replyBubble {
+	background: #d6dee3 url('../../../graphics/en/bgs/gradient_grey_324px.png') repeat-x 0 0;
+	border: 1px solid #c7daff;
+	border-right: 1px solid #a2c0fb;
+	border-bottom: 1px solid #a2c0fb;
+	margin-right: 5px;
+	margin-left: 107px;
+}
+
+.CGAuthorReply .replyBubble {
+	background: #92c9ff url('../../../graphics/en/bgs/gradient_blue_324px.png') repeat-x 0 0;
+	border: 1px solid #75a8ff;
+	border-right: 1px solid #5f95f1;
+	border-bottom: 1px solid #5f95f1;
+	margin-right: 50px;
+	margin-left: 57px;
+}
+
+#discussionWall .replies .replyBody {
+	word-wrap: break-word;
+}
+
+html.discussion .CGPost .attachment, #discussionWall .CGReply .attachment {
+	border-top: 1px dashed #ccc;
+	margin-top: 5px;
+	padding-top: 5px;
+}
+
+#discussionWall .CGReply .attachment {
+	border-bottom: 1px dashed;
+	padding-bottom: 5px;
+}
+
+#discussionWall .CGAuthorReply .attachment {
+	border-color: #5f95f1;
+}
+
+#discussionWall .CGOtherReply .attachment {
+	border-color: #c7daff;
+}
+
+html.discussion .CGPost .attachment.photo, #discussionWall .attachment.photo {
+	text-align: center;
+}
+
+#discussionWall .CGReply .attachment .CGImage {
+	display: block;
+	margin: 0 auto;
+	max-height: 200px;
+	max-width: 195px;
+}
+
+#discussionWall .replyStats {
+	background-color: #e3f1fa;
+	border: 1px solid #c6e4f2;
+	display: inline-block;
+	font-size: 11px;
+	line-height: 15px;
+	padding: 3px;
+}
+
+#discussionWall .replyStats .UIIcon {
+	margin: -2px 3px 0 0;
+}
+
+#discussionWall .replyStats .comments, #discussionWall .replyStats .likes, #discussionWall .replyStats .dislikes {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+#discussionWall .CGReply .replyUserActions {
+	font-size: 12px;
+}
+
+#discussionWall .CGAuthorReply .replyUserActions {
+	margin-left: 60px;
+}
+
+#discussionWall .CGOtherReply .replyUserActions {
+	margin-left: 110px;
+}
+
+.commentBubbleArrow {
+	background: url('../../../graphics/en/sprites/bubble_arrows.png') no-repeat -20px -38px;
+	height: 10px;
+	position: relative;
+	width: 20px;
+	z-index: 2;
+}
+
+#discussionWall .commentBubbleArrow {
+	margin: 0 0 -1px 10px;
+}
+
+#discussionWall .CGAuthorReply .commentPreviews {
+	margin-left: 60px;
+}
+
+#discussionWall .CGOtherReply .commentPreviews {
+	margin-left: 105px;
+}
+
+div.comment {
+	background-color: #e3f1fa;
+	border: 1px solid #c6e4f2;
+	font-size: 11px;
+	line-height: normal;
+	margin-bottom: 3px;
+	overflow: hidden;
+	padding: 5px;
+	box-shadow: 0 0 3px #ccc;
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
+}
+
+#discussionWall div.comment {
+	width: 340px;
+}
+
+div.comment .userThmbnlSmall img {
+	float: left;
+	height: 35px !important;
+	margin: 0 !important;
+	border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	width: 35px !important;
+}
+
+div.comment .commentBody {
+	margin-right: 15px;
+	margin-left: 45px;
+}
+
+div.comment .commentTxt {
+	line-height: 19px;
+	margin: 3px 0 1px;
+	word-break: break-word;
+}
+
+div.comment .userName {
+	display: inline-block;
+	font-weight: bold;
+	margin-right: 3px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+.showAllCommentsBtnLink, .loadPreviousCommentsBtnLink {
+	background-color: #e3f1fa;
+	border: 1px solid #c6e4f2;
+	display: block;
+	font-size: 11px;
+	line-height: 14px;
+	margin-bottom: 2px;
+	padding: 5px;
+	box-shadow: 0 0 3px #ccc;
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
+	width: 340px;
+}
+
+.showAllCommentsBtnLink .UIIcon {
+	margin-right: 5px;
+}
+
+.loadPreviousCommentsBtnLink .UIIcon {
+	margin-right: 5px;
+}
+
+.commentBox .commentError {
+	margin: 5px 0;
+}
+
+.CGAuthorReply .replyBubble, .CGOtherReply .replyBubble {
+	padding: 5px;
+}
+
+#discussionWall .allComments .CGAuthorReply .commentBox {
+	margin-top: 24px;
+}
+
+#discussionWall .commentBox {
+	width: 340px;
+}
+
+#discussionWall .commentBox textarea {
+	width: 288px;
+}
+
+#discussionWall .commentBox .UIButton.post {
+	float: right;
+	margin-top: 5px;
+	position: static;
+}
+
+#discussionWall .commentBox .paperweight {
+	width: 300px;
+}
+
+#discussionWall .bubbleArrowUp {
+	background: url('../../../graphics/en/sprites/bubble_arrows.png') no-repeat -20px 0;
+	height: 18px;
+	width: 33px;
+}
+
+#discussionWall .replyArea {
+	border-top: 1px dashed #e6e6e6;
+	margin: 20px 6px 20px 0;
+	padding-top: 10px;
+}
+
+html.discussion.public .replyArea {
+	position: relative;
+	margin: 30px 10px;
+}
+
+#discussionWall .replyArea .notice {
+	background-color: #ffffe5;
+	border: 1px solid #f5e082;
+	text-align: center;
+	font-size: 13px;
+	margin: 5px;
+	padding: 10px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+#discussionWall #publisher #editor {
+	border: 1px solid #cacaca;
+	display: block;
+	min-height: 40px;
+	padding: 5px;
+	position: relative;
+	width: 96%;
+}
+
+#discussionWall #publisher #lowerPanel {
+	width: auto;
+}
+
+html.profile .summary {
+	border-bottom: 1px dashed #e6e6e6;
+	overflow: hidden;
+	padding: 5px;
+}
+
+html.profile .summary .currentProfilePic {
+	float: left;
+	max-height: 130px;
+	max-width: 150px;
+	margin-right: 5px;
+}
+
+html.profile .summary h2.userName {
+	display: inline-block;
+	font-size: 14px;
+	margin: 5px 5px 0 0;
+}
+
+html.profile .summary .username {
+	color: #919191;
+}
+
+html.profile #UIPM {
+	overflow: hidden;
+	padding: 5px 0;
+	position: relative;
+}
+
+html.profile #UIPM.empty {
+	visibility: hidden;
+}
+
+html.profile #UIPM_wrapper {
+	background-color: #f2f2f2;
+	border: 2px solid #0073b9;
+	margin: 0 5px 0 18px;
+	overflow: hidden;
+	position: relative;
+	text-shadow: 1px 1px 1px #ccc;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 4px #ccc;
+	-moz-box-shadow: 0 0 4px #ccc;
+	-webkit-box-shadow: 0 0 4px #ccc;
+	word-wrap: break-word;
+}
+
+html.profile #UIPM_bubbleTrail {
+	background: url('../../../graphics/en/bgs/bubble_trail.png') no-repeat 0 0;
+	height: 15px;
+	margin: 13px 0 0;
+	position: absolute;
+	width: 15px;
+	z-index: 3;
+}
+
+html.profile #UIPM_inner {
+	font: 14px georgia, serif;
+	margin: 5px 0 7px;
+	padding: 0 25px;
+	text-align: center;
+}
+
+html.profile .sendReqPanel {
+	background-color: #feffdf;
+    border: 1px solid #f5e082;
+	margin: 0 5px 10px;
+	padding: 5px;
+	text-align: center;
+	box-shadow: 0 0 4px #ccc;
+	-moz-box-shadow: 0 0 4px #ccc;
+	-webkit-box-shadow: 0 0 4px #ccc;
+}
+
+html.profile .sendReqPanel p {
+	margin: 0 0 5px;
+}
+
+html.profile .reqSent {
+	background-color: #f2f2f2;
+    border: 1px solid #ccc;
+	margin: 0 5px 10px;
+	padding: 5px;
+	text-align: center;
+	text-shadow: 0 1px 1px #fff;
+	box-shadow: inset 0 0 4px #ccc;
+	-moz-box-shadow: inset 0 0 4px #ccc;
+	-webkit-box-shadow: inset 0 0 4px #ccc;
+}
+
+html.profile .connectionBtns a {
+	color: #fff;
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 10px;
+	padding: 5px 0;
+	text-align: center;
+	text-shadow: #000 0 -1px 1px;
+	-webkit-background-clip: padding-box;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+html.profile .friend_addBtn {
+	background-color: #00ad00;
+	border: 1px solid #0f0;
+}
+
+html.profile .livingRoom_followBtn {
+	background-color: #0073b9;
+	border: 1px solid #0c84cd;
+}
+
+html.profile .friend_addBtn.supressed {
+	background-color: #a8ffa8;
+    border: 1px solid #0f0;
+	text-shadow: none;
+}
+
+html.profile .livingRoom_followBtn.supressed {
+	background: #b4a8ff;
+    border: 1px solid #1500ff;
+	text-shadow: none;
+}
+
+html.profile .connectionBtns .btnSeparator {
+	padding-bottom: 8px;
+	text-align: center;
+}
+
+html.profile .connectionBtns .btnSeparator span {
+	background-color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	padding: 0 5px;
+	position: relative;
+	z-index: 2;
+}
+
+html.profile .connectionBtns hr {
+	margin: -8px 10px 0;
+	position: relative;
+	z-index: 1;
+}
+
+html.profile .connections {
+	background-color: #dadbdd;
+	border: 1px solid #777;
+	padding: 5px;
+	margin: 10px;
+	text-align: center;
+	text-shadow: 0 1px 1px #fff;
+	-webkit-background-clip: padding-box;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 3px #ccc;
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
+}
+
+html.profile .connections a {
+	border-left: 1px solid #777;
+	font-weight: bold;
+	margin-right: 4px;
+	padding-left: 7px;
+}
+
+html.profile .connections a:first-child {
+	border: 0;
+}
+
+html.profile .connections .count {
+	font-weight: normal;
+}
+
+html.profile .sectionHeader {
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	padding: 5px 7px;
+}
+
+html.profile .sectionHeader h3 {
+	color: #008f05;
+	float: left;
+	font-size: 16px;
+	margin: 0;
+}
+
+html.profile .sectionHeader .action {
+	float: right;
+}
+
+html.profile .data .label, html.profile .dataBox {
+	padding: 5px 8px;
+}
+
+html.profile .data td {
+	vertical-align: top;
+}
+
+html.profile .data .label, html.profile .data .dataDescription {
+	color: #919191;
+}
+
+html.profile .data .dataDescription {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+html.profile .dataBox .dataUnit {
+	margin-bottom: 3px;
+}
+
+html.profile .dataBox .flag {
+	height: 16px;
+	margin-right: 5px;
+	vertical-align: bottom;
+	width: 16px;
+}
+
+html.profile .dataBox .quote {
+	border-bottom: 1px dashed #e6e6e6;
+	padding-bottom: 5px;
+	margin-bottom: 3px;
+}
+
+html.profile .dataBox .quoteTxt {
+	font-style: italic;
+	line-height: 20px;
+	max-width: 300px;
+	word-wrap: break-word;
+}
+
+html.profile .dataBox .leftQuote, html.profile .dataBox .rightQuote {
+	color: #919191;
+	font-family: arial, sans-serif;
+	font-weight: bold;
+}
+
+html.profile .SHNoteboard {
+	background: #ce8553 url('../../../graphics/en/bgs/corkboard_wood_bg.png') repeat 0 0;
+	border: 4px solid #8a4400;
+	margin: 5px 5px 10px;
+	overflow: hidden;
+	position: relative;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow: 0 0 3px #000;
+	-moz-box-shadow: 0 0 3px #000;
+	-webkit-box-shadow: 0 0 3px #000;
+}
+
+html.profile .SHNoteboard .noteboardFrame {
+	min-height: 200px;
+	overflow: hidden;
+	padding: 10px;
+	position: relative;
+	box-shadow: inset 0 0 3px #000;
+	-moz-box-shadow: inset 0 0 3px #000;
+	-webkit-box-shadow: inset 0 0 3px #000;
+}
+
+html.profile .noteboard_header {
+	text-align: right;
+}
+
+html.profile .UIButton.leaveNote {
+	margin: 0 0 15px 0;
+	box-shadow: 0 0 3px #000;
+	-moz-box-shadow: 0 0 3px #000;
+	-webkit-box-shadow: 0 0 3px #000;
+}
+
+html.profile .SHNoteboard .lowerCompartment {
+	background: #f2f2f2;
+	margin: -10px -10px 0;
+	box-shadow: inset 0 0 10px #000;
+	-moz-box-shadow: inset 0 0 10px #000;
+	-webkit-box-shadow: inset 0 0 10px #000;
+}
+
+html.profile .SHNoteboard .noteInputPanel {
+	overflow: hidden;
+	margin: 0 auto 0;
+	padding: 0 0 20px;
+	position: relative;
+	text-align: left;
+	width: 270px;
+}
+
+html.profile .SHNoteboard .noteInputPanel .UIHeader {
+	overflow: hidden;
+	padding: 8px 0 6px !important;
+}
+
+html.profile .SHNoteboard .noteInputPanel .UIHeader h3 {
+	float: left;
+	font-size: 14px;
+	margin: 0;
+	text-shadow: 1px 1px 1px #ccc;
+}
+
+html.profile .SHNoteboard .noteInputPanel .UIHeader .action {
+	float: right;
+}
+
+html.profile .SHNoteboard .noteInputPanel .charCounter {
+	background-color: #fffbdb;
+	border: 1px solid #ffec42;
+	color: #b3b3b3;
+	left: 9px;
+	padding: 3px 5px;
+	position: absolute;
+	text-shadow: 0 1px 1px #fff;
+	top: 38px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	z-index: 2;
+}
+
+html.profile .SHNoteboard .noteInputPanel textarea {
+	background: #fff894 url('../../../graphics/en/UI/note_editor.png') repeat-y 0 -1px;
+	border-color: #fff27a;
+	clear: both;
+	display: block;
+	font-size: 14px;
+	height: 200px;
+	line-height: 23px;
+	overflow: hidden;
+	padding: 4px 5px 0 70px;
+	width: 190px;
+}
+
+html.profile .SHNoteboard .noteInputPanel .UIButton.private {
+	left: 20px;
+	position: absolute;
+	top: 205px;
+	z-index: 2;
+}
+
+html.profile .SHNoteboard .noteInputPanel .UIButton.private.active {
+	background-color: #ccc;
+	box-shadow: inset 0 0 4px #000;
+	-moz-box-shadow: inset 0 0 4px #000;
+	-webkit-box-shadow: inset 0 0 4px #000;
+}
+
+html.profile .SHNoteboard .noteInputPanel .UIButton.private .UIIcon {
+	margin: 0;
+}
+
+html.profile .SHNoteboard .noteInputPanel .UIButton.attach {
+	height: 16px;
+	margin: 5px 5px 0 0;
+	overflow: hidden;
+	padding-top: 4px;
+	position: relative;
+	text-align: center;
+	width: 100px;
+}
+
+html.profile .SHNoteboard .noteInputPanel .UIButton.attach .UIFileUploadControl {
+	bottom: -30px;
+	position: absolute;
+}
+
+html.profile .SHNoteboard .noteInputPanel .noteColorPalette {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	margin-top: 5px;
+	overflow: hidden;
+	padding: 3px 0 3px 3px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	width: 85px;
+}
+
+html.profile .SHNoteboard .noteColorPalette h4 {
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0 3px 0 0;
+}
+
+html.profile .SHNoteboard .noteColorPalette .color {
+	border: 1px solid #fff;
+	float: left;
+	height: 15px;
+	margin: 1px 3px 0 0;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	width: 15px;
+}
+
+html.profile .SHNoteboard .noteColorPalette .color.selected {
+	border: 2px solid #198ecf !important;
+	margin-top: 0;
+}
+
+html.profile .SHNoteboard .noteColorPalette .color.yellow {
+	background-color: #fef6bb;
+	border-color: #fce63b;
+}
+
+html.profile .SHNoteboard .noteColorPalette .color.pink {
+	background-color: #fec2f6;
+	border-color: #fc3bc9;
+}
+
+html.profile .SHNoteboard .noteColorPalette .color.blue {
+	background-color: #b9d2fd;
+	border-color: #4e3bfc;
+}
+
+html.profile .SHNoteboard .noteColorPalette .color.green {
+	background-color: #c9febb;
+	border-color: #3bfc42;
+}
+
+html.profile .SHNoteboard .noteInputPanel .UIButton.pinNote {
+	float: right;
+	margin: 5px 0 0 5px;
+}
+
+html.profile .SHNoteboard .void, html.profile .SHNoteboard .halt {
+	background-color: #fffbdb;
+	border: 1px solid #fff27a;
+	font-weight: bold;
+	margin: 10px 0;
+	overflow: hidden;
+	padding: 10px;
+	text-align: center;
+	box-shadow: 0 0 10px #000;
+	-moz-box-shadow: 0 0 10px #000;
+	-webkit-box-shadow: 0 0 10px #000;
+}
+
+html.profile .SHNoteboard .note {
+	border: 1px solid;
+	margin: 15px 0;
+	padding: 10px;
+	position: relative;
+	box-shadow: 0 0 10px #000;
+	-moz-box-shadow: 0 0 10px #000;
+	-webkit-box-shadow: 0 0 10px #000;
+	word-wrap: break-word;
+}
+
+html.profile .SHNoteboard .noteWrapper.yellow .note {
+	background: #fcf196 url('../../../graphics/en/UI/note_yellow.png') repeat 0 0;
+	border-color: #fff27a;
+}
+
+html.profile .SHNoteboard .noteWrapper.pink .note {
+	background: #fd98f0 url('../../../graphics/en/UI/note_pink.png') repeat 0 0;
+	border-color: #ff7ae0;
+}
+
+html.profile .SHNoteboard .noteWrapper.blue .note {
+	background: #96b9fc url('../../../graphics/en/UI/note_blue.png') repeat 0 0;
+	border-color: #8c7aff;
+}
+
+html.profile .SHNoteboard .noteWrapper.green .note {
+	background: #aafc96 url('../../../graphics/en/UI/note_green.png') repeat 0 0;
+	border-color: #7aff88;
+}
+
+html.profile .SHNoteboard .notePin {
+	background: url('../../../graphics/en/UI/note_pin.png') no-repeat 0 0;
+	height: 32px;
+	position: absolute;
+	right: -7px;
+	top: -12px;
+	width: 32px;
+}
+
+html.profile .SHNoteboard .note .UIIcon {
+	margin-top: -2px;
+}
+
+html.profile .SHNoteboard .note .noteBody {
+	margin-bottom: 45px;
+}
+
+html.profile .SHNoteboard .note p, html.profile .SHNoteboard .noteReply p, html.profile .SHNoteboard .photo p {
+	margin: 0;
+}
+
+html.profile .SHNoteboard .noteInfo {
+	font-size: 11px;
+	margin-top: 5px;
+}
+
+html.profile .SHNoteboard .noteTimestamp, html.profile .SHNoteboard .noteReplyTimestamp {
+	color: #919191;
+	font-size: 11px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+html.profile .SHNoteboard .noteReplyCounter .UIIcon {
+	margin-right: 5px;
+}
+
+html.profile .SHNoteboard .UIButton.deleteNote {
+	bottom: 15px;
+	position: absolute;
+	left: 10px;
+}
+
+html.profile .SHNoteboard .note .deleteConfirmationWrapper, html.profile .SHNoteboard .photo .deleteConfirmationWrapper {
+	bottom: 38px;
+	font-size: 12px;
+	left: 10px;
+	padding-bottom: 11px;
+	position: absolute;
+}
+
+html.profile .SHNoteboard .note .deleteConfirmation, html.profile .SHNoteboard .photo .deleteConfirmation {
+	border: 1px solid #ffd000;
+	position: relative;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 0 4px #555;
+	-moz-box-shadow: 0 0 4px #555;
+	-webkit-box-shadow: 0 0 4px #555;
+	width: 250px;
+}
+
+html.profile .SHNoteboard .note .deleteConfirmationWrapper .arrow, html.profile .SHNoteboard .photo .deleteConfirmationWrapper .arrow {
+	background: url('../../../graphics/en/UI/bubble_arrow_down_yellow.png') no-repeat 0 0;
+	bottom: -11px;
+	height: 11px;
+	left: 10px;
+	position: absolute;
+	width: 11px;
+}
+
+html.profile .SHNoteboard .userInfo {
+	bottom: 5px;
+	display: block;
+	font-size: 12px;
+	overflow: hidden;
+	padding: 5px;
+	position: absolute;
+	right: 5px;
+}
+
+html.profile .SHNoteboard .userThmbnlSmall {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-top-color: #eee;
+	border-right-color: #ddd;
+	border-bottom-color: #bbb;
+	float: left;
+	height: 34px;
+	padding: 1px;
+	box-shadow: 0 1px 2px #999;
+	-moz-box-shadow: 0 1px 2px #999;
+	-webkit-box-shadow: 0 1px 2px #999;
+	width: 34px;
+}
+
+html.profile .SHNoteboard .userName {
+	display: block;
+	margin-left: 45px;
+}
+
+html.profile .SHNoteboard .username {
+	color: #090;
+	display: block;
+	margin-left: 45px;
+	text-decoration: none !important;
+}
+
+html.profile .SHNoteboard .photo {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-top-color: #eee;
+	border-right-color: #ddd;
+	border-bottom-color: #bbb;
+	margin: 15px 0;
+	padding: 4px;
+	position: relative;
+	box-shadow: 0 0 10px #000;
+	-moz-box-shadow: 0 0 10px #000;
+	-webkit-box-shadow: 0 0 10px #000;
+}
+
+html.profile .SHNoteboard .CGImage {
+	text-align: center;
+}
+
+html.profile .SHNoteboard .CGImage img {
+	max-width: 200px;
+}
+
+html.profile .SHNoteboard .photo .UIButton.deleteNote {
+	bottom: auto;
+	top: 10px;
+}
+
+html.profile .SHNoteboard .photo .deleteConfirmationWrapper {
+	bottom: auto;
+	top: -54px;
+}
+
+html.profile .SHNoteboard .photo .userInfo {
+	background-color: #fff !important;
+	border: 0 !important;
+}
+
+html.profile .SHNoteboard .photo .noteInfo {
+	margin: 0 0 5px 5px;
+	text-align: left;
+}
+
+html.profile .SHNoteboard .photo .caption {
+	margin: 5px 0 30px;
+}
+
+html.profile .SHNoteboard .noteReplies {
+	margin: -20px 20px 0 10px;
+	padding-top: 10px;
+	box-shadow: 0 0 10px #000;
+	-moz-box-shadow: 0 0 10px #000;
+	-webkit-box-shadow: 0 0 10px #000;
+	width: 259px;
+	z-index: 3;
+}
+
+html.profile .SHNoteboard .noteWrapper.yellow .noteReplies {
+	background-color: #fef6bb;
+}
+
+html.profile .SHNoteboard .noteWrapper.pink .noteReplies {
+	background-color: #fec2f6;
+}
+
+html.profile .SHNoteboard .noteWrapper.blue .noteReplies {
+	background-color: #b9d2fd;
+}
+
+html.profile .SHNoteboard .noteWrapper.green .noteReplies {
+	background-color: #c9febb;
+}
+
+html.profile .SHNoteboard .hasPhoto .noteReplies {
+	background-color: #fef6bb !important;
+}
+
+html.profile .SHNoteboard .noteReply {
+	border-bottom: 1px dashed;
+	font-size: 12px;
+	overflow: hidden;
+	padding: 10px;
+}
+
+html.profile .SHNoteboard .noteWrapper.yellow .noteReply {
+	background-color: #fef6bb;
+	border-color: #ffec42;
+}
+
+html.profile .SHNoteboard .noteWrapper.pink .noteReply {
+	background-color: #fec2f6;
+	border-color: #ff7adc;
+}
+
+html.profile .SHNoteboard .noteWrapper.blue .noteReply {
+	background-color: #b9d2fd;
+	border-color: #887aff;
+}
+
+html.profile .SHNoteboard .noteWrapper.green .noteReply {
+	background-color: #c9febb;
+	border-color: #7aff88;
+}
+
+html.profile .SHNoteboard .hasPhoto .noteReply {
+	background-color: #fef6bb !important;
+	border-color: #ffec42 !important;
+}
+
+html.profile .SHNoteboard .noteReplyBody {
+	margin-left: 45px;
+}
+
+html.profile .SHNoteboard .noteReply .deleteConfirmation {
+	margin: 0 0 5px;
+}
+
+html.profile .SHNoteboard .noteReply .userName {
+	float: left;
+	font-weight: bold;
+	margin: 0 5px 0 0;
+}
+
+html.profile .SHNoteboard .showPreviousNoteReplies {
+	padding: 7px 10px;
+}
+
+html.profile .SHNoteboard .showPreviousNoteReplies a {
+	display: block;
+}
+
+html.profile .SHNoteboard .noteReplyInfo {
+	font-size: 11px;
+	margin-top: 3px;
+}
+
+html.profile .SHNoteboard .replyBox {
+	position: relative;
+}
+
+html.profile .SHNoteboard .replyBox textarea {
+	display: block;
+	height: 32px;
+	padding: 3px;
+	resize: none;
+	width: 180px;
+}
+
+html.profile .SHNoteboard .leaveNoteReply {
+	bottom: 10px;
+	position: absolute;
+	right: 10px;
+}
+
+html.profile .SHNoteboard .loadMoreBtn {
+	box-shadow: 0 0 4px #000;
+	-moz-box-shadow: 0 0 4px #000;
+	-webkit-box-shadow: 0 0 4px #000;
+	width: auto;
+}
+
+.UIPopupWindow {
+	left: 50%;
+	position: absolute;
+	z-index: 99;
+}
+
+.UIPopupWindow .wrapper {
+	position: relative;
+}
+
+.UIPopupWindow .UIPopupWindowContents {
+	border: 3px solid #021ca2;
+	background-color: #fff;
+	box-shadow: 0 0 20px #000;
+	-moz-box-shadow: 0 0 20px #000;
+	-webkit-box-shadow: 0 0 20px #000;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.UIPopupWindow.hasArrow_top .wrapper {
+	padding-top: 9px;
+}
+
+.UIPopupWindow.hasArrow_right .wrapper {
+	padding-right: 9px;
+}
+
+.UIPopupWindow.hasArrow_bottom .wrapper {
+	padding-bottom: 9px;
+}
+
+.UIPopupWindow.hasArrow_left .wrapper {
+	padding-left: 9px;
+}
+
+.UIPopupWindow .bubbleArrow.top, .UIPopupWindow .bubbleArrow.bottom {
+	background: url('../../../graphics/en/sprites/bubble_arrows.png') no-repeat;
+	position: absolute;
+	height: 11px;
+	left: 50%;
+	margin-left: -11px;
+	width: 21px;
+}
+
+.UIPopupWindow .bubbleArrow.right, .UIPopupWindow .bubbleArrow.left {
+	background: url('../../../graphics/en/sprites/bubble_arrows.png') no-repeat;
+	position: absolute;
+	height: 21px;
+	top: 50%;
+	margin-top: -11px;
+	width: 10px;
+}
+
+.UIPopupWindow .bubbleArrow.top {
+	background-position: -25px -68px;
+	top: 0;
+}
+
+.UIPopupWindow .bubbleArrow.right {
+	background-position: -36px -70px;
+	right: 0;
+}
+
+.UIPopupWindow .bubbleArrow.bottom {
+	background-position: -25px -80px;
+	bottom: 0;
+}
+
+.UIPopupWindow .bubbleArrow.left {
+	background-position: -25px -70px;
+	left: 0;
+}
+
+.UIPopupWindow .UIHeader {
+	border-bottom: 1px solid #ccc;
+	margin: 0 6px;
+	overflow: hidden;
+	padding: 6px 0;
+}
+
+.UIPopupWindow .UIHeader h3 {
+	float: left;
+	font-size: 11px;
+	margin: 0;
+}
+
+.UIPopupWindow .UIHeader .action {
+	float: right;
+	font-size: 11px;
+}
+
+.UIPopupWindow .UIPanel {
+	background-color: #f2f2f2;
+	border: 1px solid #ccc;
+	clear: both;
+	overflow: hidden;
+	padding: 6px 0;
+}
+
+.UIPopoverTray {
+	background-color: #fff;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+}
+
+.UIPopoverTray .UIHeader {
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+	padding: 5px 10px;
+	box-shadow: 0 0 4px #ccc;
+	-moz-box-shadow: 0 0 4px #ccc;
+	-webkit-box-shadow: 0 0 4px #ccc;
+}
+
+.UIPopoverTray .UIHeader h3 {
+	color: #919191;
+	float: left;
+	font-size: 14px;
+	margin: 5px 0 0;
+	text-shadow: 0 1px 1px #fff;
+	text-transform: uppercase;
+}
+
+.UIPopoverTray .UIHeader .action {
+	float: right;
+}
+
+.UIPopoverTray .UISearchBar {
+	display: none;
+}
+
+.UIPopoverTray.searchEnabled .UISearchBar {
+	display: block;
+}
+
+.UISearchBar {
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+	padding: 5px;
+	box-shadow: 0 0 4px #ccc;
+	-moz-box-shadow: 0 0 4px #ccc;
+	-webkit-box-shadow: 0 0 4px #ccc;
+}
+
+.UISearchBar .UITextInput {
+	width: 72%;
+}
+
+.UIPopoverTray .UITableView {
+	border-bottom: 1px solid #fff;
+}
+
+.UIPopoverTray .UITableCell {
+	border-bottom: 1px solid #e6e6e6;
+	margin: 0 5px;
+	overflow: hidden;
+	padding: 10px 5px;
+}
+
+.UIPopoverTray .cellPicture {
+	float: left;
+	margin-right: 5px;
+}
+
+.UIPopoverTray .cellPicture img {
+	height: 50px;
+	width: 50px;
+}
+
+.UIPopoverTray h4.userName {
+	margin: 0 0 0 60px;
+}
+
+.UIPopoverTray h4.userName span {
+	color: #919191;
+	font-weight: normal;
+}
+
+.UIPopoverTray .username, .UIPopoverTray .mutuals {
+	display: block;
+	margin: 3px 5px 0 60px;
+}
+
+.UIPopoverTray .username {
+	color: #090;
+}
+
+.UIPopoverTray .mutuals {
+	color: #919191;
+}
+
+.UIPopoverTray .attachment {
+	float: right;
+	margin-top: 5px;
+}
+
+.UIPopoverTray .attachment .success {
+	background-color: #f2f2f2;
+	border: 1px solid #ccc;
+	display: inline-block;
+	line-height: 16px;
+	padding: 2px 3px;
+	text-shadow: 0 -1px 1px #fff;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.UIPopoverTray .attachment .success .UIIcon {
+	margin-right: 3px;
+}
+
+.UIPopoverTray .void {
+	color: #919191;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 30px auto 0;
+	text-align: center;
+}
+
+.UIPopoverTray .loadMoreBtn {
+	margin: 10px;
+}
+
+.UIPopoverTray .commentView .photoPreview img {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-top-color: #eee;
+	border-right-color: #ddd;
+	border-bottom-color: #bbb;
+	display: block;
+	margin: 10px 3px;
+	max-height: 150px;
+	max-width: 170px;
+	padding: 4px;
+	box-shadow: 0 1px 3px #999;
+	-moz-box-shadow: 0 1px 3px #999;
+	-webkit-box-shadow: 0 1px 3px #999;
+}
+
+.UIPopoverTray .commentView .replyPreview {
+	margin: 10px 10px 0;
+	overflow: hidden;
+}
+
+.UIPopoverTray .commentView .goto {
+	float: right;
+}
+
+.UIPopoverTray .commentView .replyPreview .userThmbnlSmall img {
+	float: left;
+	height: 50px;
+	box-shadow: 0 0 3px #ccc;
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	width: 50px;
+}
+
+.UIPopoverTray .commentView .replyBody {
+	font-size: 13px;
+	margin-left: 60px;
+}
+
+.UIPopoverTray .commentView .replyPreview .authorName {
+	font-weight: bold;
+}
+
+.UIPopoverTray .commentView .replyTxt {
+	margin: 3px 0;
+}
+
+.UIPopoverTray .commentView .comments {
+	margin: 5px 10px;
+}
+
+.UIPopoverTray .commentView .commentBubbleArrow {
+	margin: 0 0 -1px 15px;
+}
+
+.UIPopoverTray .commentView .commentBox {
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.UIPopoverTray .commentView .commentBox textarea {
+	display: block;
+	width: 96%;
+}
+
+.UIPopoverTray .commentView .commentBox .UIButton.post {
+	float: right;
+	margin-top: 5px;
+	position: static;
+}
+
+.UIIcon.px16 {
+	background: url('../../../graphics/en/sprites/basic.png') no-repeat 0 0;
+	display: inline-block;
+	height: 16px;
+	position: relative;
+	vertical-align: bottom;
+	width: 16px;
+}
+
+.UIIcon.px16.home {
+	background-position: -73px 0;
+	width: 14px;
+}
+
+.UIIcon.px16.profile {
+	background-position: -118px 0;
+	width: 15px;
+}
+
+.UIIcon.px16.friend_add {
+	background-position: -152px 0;
+}
+
+.UIIcon.px16.follow {
+	background-position: -168px 0;
+}
+
+.UIIcon.px16.flag_green {
+	background-position: -59px 1px;
+	width: 12px;
+}
+
+.UIIcon.px16.settings {
+	background-position: -121px 1px;
+	width: 15px;
+}
+
+.UIIcon.px16.settings_black {
+	background: url('../../../graphics/en/icons/settings_black_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.settings_white {
+	background: url('../../../graphics/en/icons/settings_white_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.like {
+	background-position: -90px 0;
+	width: 13px;
+}
+
+.UIIcon.px16.dislike {
+	background-position: -45px 1px;
+	width: 13px;
+}
+
+.UIIcon.px16.reply {
+	vertical-align: middle;
+	width: 15px;
+}
+
+.UIIcon.px16.comment {
+	background-position: -15px 0;
+}
+
+.UIIcon.px16.comment_black {
+	background: url('../../../graphics/en/icons/comments_black_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.wink_black {
+	background: url('../../../graphics/en/icons/wink_black_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.photo {
+	background-position: -195px 1px;
+}
+
+.UIIcon.px16.video {
+	background: url('../../../graphics/en/icons/video_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.timeline {
+	background-position: -211px 0;
+}
+
+.UIIcon.px16.flag_black {
+	background: url('../../../graphics/en/icons/flag_black_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.livingRoom {
+	background: url('../../../graphics/en/icons/living_room_16px.png') no-repeat 0 0 !important;
+	vertical-align: middle;
+}
+
+.UIIcon.px16.noteboard {
+	background: url('../../../graphics/en/icons/noteboard_16px.png') no-repeat 0 0 !important;
+	vertical-align: middle;
+}
+
+.UIIcon.px16.tag {
+	background: url('../../../graphics/en/icons/tag_black_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.add_black {
+	background: url('../../../graphics/en/icons/add_black_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.link {
+	background: url('../../../graphics/en/icons/link_16px.png') no-repeat 0 0 !important;
+	vertical-align: middle;
+}
+
+.UIIcon.px16.inbox {
+	background: url('../../../graphics/en/icons/message_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.inbox_black {
+	background: url('../../../graphics/en/icons/message_black_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.textInput {
+	background: url('../../../graphics/en/icons/text_16px.png') no-repeat 0 0 !important;
+	vertical-align: middle;
+}
+
+.UIIcon.px16.friends {
+	background: url('../../../graphics/en/icons/friends_16px.png') no-repeat 0 0 !important;
+	vertical-align: middle;
+}
+
+.UIIcon.px16.followers {
+	background: url('../../../graphics/en/icons/user_16px.png') no-repeat 0 0 !important;
+	vertical-align: middle;
+}
+
+.UIIcon.px16.activity {
+	background: url('../../../graphics/en/icons/activities_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.activity_black {
+	background: url('../../../graphics/en/icons/activities_black_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.maps {
+	background: url('../../../graphics/en/icons/map_marker_red_16px.png') no-repeat 0 0 !important;
+	vertical-align: middle;
+}
+
+.UIIcon.px16.pending {
+	background: url('../../../graphics/en/icons/time_16px.png') no-repeat 0 0 !important;
+	vertical-align: middle;
+}
+
+.UIIcon.px16.info {
+	background: url('../../../graphics/en/icons/info_16px.png') no-repeat 0 0 !important;
+	vertical-align: middle;
+}
+
+.UIIcon.px16.edit {
+	background: url('../../../graphics/en/icons/pencil_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.edit_black {
+	background: url('../../../graphics/en/icons/pencil_black_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.arrow_black_up {
+	background: url('../../../graphics/en/icons/navi_arrow_up_black.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.arrow_black_right {
+	background: url('../../../graphics/en/icons/navi_arrow_right_black.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.arrow_black_down {
+	background: url('../../../graphics/en/icons/navi_arrow_down_black.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.arrow_black_left {
+	background: url('../../../graphics/en/icons/navi_arrow_left_black.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.trash {
+	background: url('../../../graphics/en/icons/trash_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.tick {
+	background-position: -137px 0;
+	width: 14px;
+}
+
+.UIIcon.px16.cross {
+	background-position: -31px 0;
+	width: 14px;
+}
+
+.UIIcon.px16.favorites {
+	background: url('../../../graphics/en/icons/heart_colored_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.favorites_2 {
+	background: url('../../../graphics/en/icons/favorites_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.lock {
+	background-position: -104px 0;
+}
+
+.UIIcon.px16.lock_black {
+	background: url('../../../graphics/en/icons/lock_black_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.lock_grey {
+	background: url('../../../graphics/en/icons/lock_grey_16px.png') no-repeat 0 0 !important;
+}
+
+.UIIcon.px16.mobile {
+	background-position: -184px 0;
+	width: 11px;
+}
